@@ -6,11 +6,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--Passphrase Generator - First-->
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-                <viewController title="First" id="2" customClass="PPFirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="2" customClass="PPPassphraseGenerator" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,11 +70,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Generator" image="first" id="7"/>
                     <connections>
-                        <outletCollection property="GeneratedWords" destination="m6a-Tx-idT" id="zLx-IL-mdV"/>
-                        <outletCollection property="GeneratedWords" destination="857-kJ-lQI" id="wxT-lF-4Xg"/>
-                        <outletCollection property="GeneratedWords" destination="CmT-jd-ofn" id="Bth-MD-5ub"/>
-                        <outletCollection property="GeneratedWords" destination="GFz-ga-VQW" id="TVC-gA-790"/>
-                        <outletCollection property="GeneratedWords" destination="NFp-7d-waw" id="nlT-9y-DEo"/>
+                        <outletCollection property="generatedWords" destination="GFz-ga-VQW" id="frI-dd-Kof"/>
+                        <outletCollection property="generatedWords" destination="m6a-Tx-idT" id="mqX-DE-af1"/>
+                        <outletCollection property="generatedWords" destination="NFp-7d-waw" id="Zeg-2B-v2c"/>
+                        <outletCollection property="generatedWords" destination="857-kJ-lQI" id="0PO-TL-phc"/>
+                        <outletCollection property="generatedWords" destination="CmT-jd-ofn" id="IIR-JI-ffB"/>
                     </connections>
                 </viewController>
             </objects>

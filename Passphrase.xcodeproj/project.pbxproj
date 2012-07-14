@@ -15,7 +15,7 @@
 		D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */; };
 		D395CF7A15B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */; };
 		D395CF7D15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */; };
-		D395CF8015B1427400FDF0E6 /* PPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7F15B1427400FDF0E6 /* PPFirstViewController.m */; };
+		D395CF8015B1427400FDF0E6 /* PPPassphraseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */; };
 		D395CF8215B1427400FDF0E6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8115B1427400FDF0E6 /* first.png */; };
 		D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8315B1427400FDF0E6 /* first@2x.png */; };
 		D395CF8715B1427400FDF0E6 /* PPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */; };
@@ -59,8 +59,8 @@
 		D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
 		D395CF7915B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D395CF7C15B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		D395CF7E15B1427400FDF0E6 /* PPFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPFirstViewController.h; sourceTree = "<group>"; };
-		D395CF7F15B1427400FDF0E6 /* PPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPFirstViewController.m; sourceTree = "<group>"; };
+		D395CF7E15B1427400FDF0E6 /* PPPassphraseGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPPassphraseGenerator.h; sourceTree = "<group>"; };
+		D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPassphraseGenerator.m; sourceTree = "<group>"; };
 		D395CF8115B1427400FDF0E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D395CF8315B1427400FDF0E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		D395CF8515B1427400FDF0E6 /* PPSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSecondViewController.h; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 				D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */,
 				D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */,
 				D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */,
-				D395CF7E15B1427400FDF0E6 /* PPFirstViewController.h */,
-				D395CF7F15B1427400FDF0E6 /* PPFirstViewController.m */,
+				D395CF7E15B1427400FDF0E6 /* PPPassphraseGenerator.h */,
+				D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */,
 				D395CF8115B1427400FDF0E6 /* first.png */,
 				D395CF8315B1427400FDF0E6 /* first@2x.png */,
 				D395CF8515B1427400FDF0E6 /* PPSecondViewController.h */,
@@ -310,7 +310,7 @@
 			files = (
 				D395CF7315B1427400FDF0E6 /* main.m in Sources */,
 				D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */,
-				D395CF8015B1427400FDF0E6 /* PPFirstViewController.m in Sources */,
+				D395CF8015B1427400FDF0E6 /* PPPassphraseGenerator.m in Sources */,
 				D395CF8715B1427400FDF0E6 /* PPSecondViewController.m in Sources */,
 				D395CFAA15B146D100FDF0E6 /* diceware8k.c in Sources */,
 				D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
