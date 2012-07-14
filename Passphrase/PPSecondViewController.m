@@ -12,27 +12,74 @@
 
 @end
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @implementation PPSecondViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+@synthesize passphraseField                         = _passphraseField;
+@synthesize doneButton                              = _doneButton;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)viewDidLoad {
+
+  [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)viewDidUnload {
+
+  [self setDoneButton:nil];
+  [self setPassphraseField:nil];
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)viewDidAppear:(BOOL)animated {
+  
+  [self.passphraseField becomeFirstResponder];
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+  } else {
+    return YES;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (IBAction)didTapDone:(id)sender {
+  
+  [self.passphraseField resignFirstResponder];
+}
+
+#pragma mark - UITextFieldDelegate
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  
+  [textField resignFirstResponder];
+  return YES;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+  
+  [textField resignFirstResponder];
+}
+
 
 @end

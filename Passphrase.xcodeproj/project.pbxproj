@@ -38,6 +38,16 @@
 		D395CFC115B1D74400FDF0E6 /* GenerateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */; };
 		D395CFC215B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */; };
 		D395CFC315B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */; };
+		D395CFC715B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */; };
+		D395CFC815B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */; };
+		D395CFCB15B1F49E00FDF0E6 /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFC915B1F49E00FDF0E6 /* DoneButton.png */; };
+		D395CFCC15B1F49E00FDF0E6 /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFC915B1F49E00FDF0E6 /* DoneButton.png */; };
+		D395CFCD15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */; };
+		D395CFCE15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */; };
+		D395CFD115B1F5DD00FDF0E6 /* BlackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */; };
+		D395CFD215B1F5DD00FDF0E6 /* BlackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */; };
+		D395CFD315B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */; };
+		D395CFD415B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +95,11 @@
 		D395CFB715B148BA00FDF0E6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenerateButton.png; sourceTree = "<group>"; };
 		D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GenerateButton@2x.png"; sourceTree = "<group>"; };
+		D395CFC615B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedPhrases.xcdatamodel; sourceTree = "<group>"; };
+		D395CFC915B1F49E00FDF0E6 /* DoneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneButton.png; sourceTree = "<group>"; };
+		D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DoneButton@2x.png"; sourceTree = "<group>"; };
+		D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackground.png; sourceTree = "<group>"; };
+		D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackBackground@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +164,10 @@
 		D395CF6C15B1427400FDF0E6 /* Passphrase */ = {
 			isa = PBXGroup;
 			children = (
+				D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */,
+				D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */,
+				D395CFC915B1F49E00FDF0E6 /* DoneButton.png */,
+				D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */,
 				D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */,
 				D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */,
 				D395CFAF15B147C200FDF0E6 /* NSData+EncryptionHelpers.h */,
@@ -169,6 +188,7 @@
 				D395CF8A15B1427400FDF0E6 /* second@2x.png */,
 				D395CF6D15B1427400FDF0E6 /* Supporting Files */,
 				D395CFA915B146D100FDF0E6 /* diceware8k.c */,
+				D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */,
 			);
 			path = Passphrase;
 			sourceTree = "<group>";
@@ -284,6 +304,10 @@
 				D395CF8B15B1427400FDF0E6 /* second@2x.png in Resources */,
 				D395CFC015B1D74400FDF0E6 /* GenerateButton.png in Resources */,
 				D395CFC215B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */,
+				D395CFCB15B1F49E00FDF0E6 /* DoneButton.png in Resources */,
+				D395CFCD15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */,
+				D395CFD115B1F5DD00FDF0E6 /* BlackBackground.png in Resources */,
+				D395CFD315B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +318,10 @@
 				D395CF9D15B1427400FDF0E6 /* InfoPlist.strings in Resources */,
 				D395CFC115B1D74400FDF0E6 /* GenerateButton.png in Resources */,
 				D395CFC315B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */,
+				D395CFCC15B1F49E00FDF0E6 /* DoneButton.png in Resources */,
+				D395CFCE15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */,
+				D395CFD215B1F5DD00FDF0E6 /* BlackBackground.png in Resources */,
+				D395CFD415B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +355,7 @@
 				D395CFAA15B146D100FDF0E6 /* diceware8k.c in Sources */,
 				D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
 				D395CFB515B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
+				D395CFC715B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +367,7 @@
 				D395CFAB15B146D100FDF0E6 /* diceware8k.c in Sources */,
 				D395CFB415B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
 				D395CFB615B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
+				D395CFC815B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +551,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D395CFC615B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodel */,
+			);
+			currentVersion = D395CFC615B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodel */;
+			path = SavedPhrases.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D395CF5915B1427400FDF0E6 /* Project object */;
 }

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PPSecondViewController : UIViewController
+@interface PPSecondViewController : UIViewController<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *passphraseField;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+- (IBAction)didTapDone:(id)sender;
 
 @end
