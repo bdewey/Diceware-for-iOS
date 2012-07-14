@@ -15,6 +15,8 @@
 
 @interface PPPassphraseGenerator ()
 
+- (NSString *)diceDigitsForIndex:(unsigned int)index;
+
 @end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -62,17 +64,33 @@
 
 - (IBAction)didTapGenerate:(id)sender {
   
-  NSData *randomBytes = [NSData dataWithRandomBytes:5 * sizeof(int)];
-  const unsigned int *bytes = randomBytes.bytes;
   for (int i = 0; i < 5; i++) {
     
-    unsigned int trimmed = *bytes & 0x1FFF;
+    unsigned int trimmed = 0x1FFF;
+    while (trimmed >= 7776) {
+      NSData *randomBytes = [NSData dataWithRandomBytes:sizeof(int)];
+      const unsigned int *bytes = randomBytes.bytes;
+      trimmed = *bytes & 0x1FFF;
+    }
     char *word = getDiceWd(trimmed);
     NSString *randomWord = [NSString stringWithUTF8String:word];
     UILabel *label = [self.generatedWords objectAtIndex:i];
-    label.text = randomWord;
-    bytes++;
+    label.text = [NSString stringWithFormat:@"%@ %@", [self diceDigitsForIndex:trimmed], randomWord];
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (NSString *)diceDigitsForIndex:(unsigned int)index {
+  
+  NSMutableString *result = [NSMutableString stringWithString:@"00000"];
+  for (int i = 0; i < 5; i++) {
+    
+    int digit = (index % 6) + 1;
+    index /= 6;
+    [result replaceCharactersInRange:NSMakeRange(5-i-1, 1) withString:[NSString stringWithFormat:@"%d", digit]];
+  }
+  return result;
 }
 
 @end
