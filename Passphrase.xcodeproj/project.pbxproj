@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D395CF6715B1427400FDF0E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6615B1427400FDF0E6 /* UIKit.framework */; };
+		D395CF6915B1427400FDF0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6815B1427400FDF0E6 /* Foundation.framework */; };
+		D395CF6B15B1427400FDF0E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6A15B1427400FDF0E6 /* CoreGraphics.framework */; };
+		D395CF7115B1427400FDF0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D395CF6F15B1427400FDF0E6 /* InfoPlist.strings */; };
+		D395CF7315B1427400FDF0E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7215B1427400FDF0E6 /* main.m */; };
+		D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */; };
+		D395CF7A15B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */; };
+		D395CF7D15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */; };
+		D395CF8015B1427400FDF0E6 /* PPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7F15B1427400FDF0E6 /* PPFirstViewController.m */; };
+		D395CF8215B1427400FDF0E6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8115B1427400FDF0E6 /* first.png */; };
+		D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8315B1427400FDF0E6 /* first@2x.png */; };
+		D395CF8715B1427400FDF0E6 /* PPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */; };
+		D395CF8915B1427400FDF0E6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8815B1427400FDF0E6 /* second.png */; };
+		D395CF8B15B1427400FDF0E6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8A15B1427400FDF0E6 /* second@2x.png */; };
+		D395CF9315B1427400FDF0E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */; };
+		D395CF9415B1427400FDF0E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6615B1427400FDF0E6 /* UIKit.framework */; };
+		D395CF9515B1427400FDF0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6815B1427400FDF0E6 /* Foundation.framework */; };
+		D395CF9D15B1427400FDF0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D395CF9B15B1427400FDF0E6 /* InfoPlist.strings */; };
+		D395CFA015B1427400FDF0E6 /* PassphraseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF9F15B1427400FDF0E6 /* PassphraseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D395CF9615B1427400FDF0E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D395CF5915B1427400FDF0E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D395CF6115B1427400FDF0E6;
+			remoteInfo = Passphrase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D395CF6215B1427400FDF0E6 /* Passphrase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passphrase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D395CF6615B1427400FDF0E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D395CF6815B1427400FDF0E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D395CF6A15B1427400FDF0E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D395CF6E15B1427400FDF0E6 /* Passphrase-Info.plist */ = {isa = PBXFileReference; path = "Passphrase-Info.plist"; sourceTree = "<group>"; };
+		D395CF7015B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D395CF7215B1427400FDF0E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D395CF7415B1427400FDF0E6 /* Passphrase-Prefix.pch */ = {isa = PBXFileReference; path = "Passphrase-Prefix.pch"; sourceTree = "<group>"; };
+		D395CF7515B1427400FDF0E6 /* PPAppDelegate.h */ = {isa = PBXFileReference; path = PPAppDelegate.h; sourceTree = "<group>"; };
+		D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
+		D395CF7915B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D395CF7C15B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		D395CF7E15B1427400FDF0E6 /* PPFirstViewController.h */ = {isa = PBXFileReference; path = PPFirstViewController.h; sourceTree = "<group>"; };
+		D395CF7F15B1427400FDF0E6 /* PPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPFirstViewController.m; sourceTree = "<group>"; };
+		D395CF8115B1427400FDF0E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		D395CF8315B1427400FDF0E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		D395CF8515B1427400FDF0E6 /* PPSecondViewController.h */ = {isa = PBXFileReference; path = PPSecondViewController.h; sourceTree = "<group>"; };
+		D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSecondViewController.m; sourceTree = "<group>"; };
+		D395CF8815B1427400FDF0E6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		D395CF8A15B1427400FDF0E6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassphraseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D395CF9A15B1427400FDF0E6 /* PassphraseTests-Info.plist */ = {isa = PBXFileReference; path = "PassphraseTests-Info.plist"; sourceTree = "<group>"; };
+		D395CF9C15B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D395CF9E15B1427400FDF0E6 /* PassphraseTests.h */ = {isa = PBXFileReference; path = PassphraseTests.h; sourceTree = "<group>"; };
+		D395CF9F15B1427400FDF0E6 /* PassphraseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassphraseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D395CF5F15B1427400FDF0E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D395CF6715B1427400FDF0E6 /* UIKit.framework in Frameworks */,
+				D395CF6915B1427400FDF0E6 /* Foundation.framework in Frameworks */,
+				D395CF6B15B1427400FDF0E6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D395CF8D15B1427400FDF0E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D395CF9315B1427400FDF0E6 /* SenTestingKit.framework in Frameworks */,
+				D395CF9415B1427400FDF0E6 /* UIKit.framework in Frameworks */,
+				D395CF9515B1427400FDF0E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D395CF5715B1427400FDF0E6 = {
+			isa = PBXGroup;
+			children = (
+				D395CF6C15B1427400FDF0E6 /* Passphrase */,
+				D395CF9815B1427400FDF0E6 /* PassphraseTests */,
+				D395CF6515B1427400FDF0E6 /* Frameworks */,
+				D395CF6315B1427400FDF0E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D395CF6315B1427400FDF0E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D395CF6215B1427400FDF0E6 /* Passphrase.app */,
+				D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D395CF6515B1427400FDF0E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D395CF6615B1427400FDF0E6 /* UIKit.framework */,
+				D395CF6815B1427400FDF0E6 /* Foundation.framework */,
+				D395CF6A15B1427400FDF0E6 /* CoreGraphics.framework */,
+				D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D395CF6C15B1427400FDF0E6 /* Passphrase */ = {
+			isa = PBXGroup;
+			children = (
+				D395CF7515B1427400FDF0E6 /* PPAppDelegate.h */,
+				D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */,
+				D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */,
+				D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */,
+				D395CF7E15B1427400FDF0E6 /* PPFirstViewController.h */,
+				D395CF7F15B1427400FDF0E6 /* PPFirstViewController.m */,
+				D395CF8115B1427400FDF0E6 /* first.png */,
+				D395CF8315B1427400FDF0E6 /* first@2x.png */,
+				D395CF8515B1427400FDF0E6 /* PPSecondViewController.h */,
+				D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */,
+				D395CF8815B1427400FDF0E6 /* second.png */,
+				D395CF8A15B1427400FDF0E6 /* second@2x.png */,
+				D395CF6D15B1427400FDF0E6 /* Supporting Files */,
+			);
+			path = Passphrase;
+			sourceTree = "<group>";
+		};
+		D395CF6D15B1427400FDF0E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D395CF6E15B1427400FDF0E6 /* Passphrase-Info.plist */,
+				D395CF6F15B1427400FDF0E6 /* InfoPlist.strings */,
+				D395CF7215B1427400FDF0E6 /* main.m */,
+				D395CF7415B1427400FDF0E6 /* Passphrase-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D395CF9815B1427400FDF0E6 /* PassphraseTests */ = {
+			isa = PBXGroup;
+			children = (
+				D395CF9E15B1427400FDF0E6 /* PassphraseTests.h */,
+				D395CF9F15B1427400FDF0E6 /* PassphraseTests.m */,
+				D395CF9915B1427400FDF0E6 /* Supporting Files */,
+			);
+			path = PassphraseTests;
+			sourceTree = "<group>";
+		};
+		D395CF9915B1427400FDF0E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D395CF9A15B1427400FDF0E6 /* PassphraseTests-Info.plist */,
+				D395CF9B15B1427400FDF0E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D395CF6115B1427400FDF0E6 /* Passphrase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D395CFA315B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "Passphrase" */;
+			buildPhases = (
+				D395CF5E15B1427400FDF0E6 /* Sources */,
+				D395CF5F15B1427400FDF0E6 /* Frameworks */,
+				D395CF6015B1427400FDF0E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Passphrase;
+			productName = Passphrase;
+			productReference = D395CF6215B1427400FDF0E6 /* Passphrase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D395CF9015B1427400FDF0E6 /* PassphraseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D395CFA615B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "PassphraseTests" */;
+			buildPhases = (
+				D395CF8C15B1427400FDF0E6 /* Sources */,
+				D395CF8D15B1427400FDF0E6 /* Frameworks */,
+				D395CF8E15B1427400FDF0E6 /* Resources */,
+				D395CF8F15B1427400FDF0E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D395CF9715B1427400FDF0E6 /* PBXTargetDependency */,
+			);
+			name = PassphraseTests;
+			productName = PassphraseTests;
+			productReference = D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D395CF5915B1427400FDF0E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PP;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Brian's Brain";
+			};
+			buildConfigurationList = D395CF5C15B1427400FDF0E6 /* Build configuration list for PBXProject "Passphrase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D395CF5715B1427400FDF0E6;
+			productRefGroup = D395CF6315B1427400FDF0E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D395CF6115B1427400FDF0E6 /* Passphrase */,
+				D395CF9015B1427400FDF0E6 /* PassphraseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D395CF6015B1427400FDF0E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D395CF7115B1427400FDF0E6 /* InfoPlist.strings in Resources */,
+				D395CF7A15B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D395CF7D15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard in Resources */,
+				D395CF8215B1427400FDF0E6 /* first.png in Resources */,
+				D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */,
+				D395CF8915B1427400FDF0E6 /* second.png in Resources */,
+				D395CF8B15B1427400FDF0E6 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D395CF8E15B1427400FDF0E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D395CF9D15B1427400FDF0E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D395CF8F15B1427400FDF0E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D395CF5E15B1427400FDF0E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D395CF7315B1427400FDF0E6 /* main.m in Sources */,
+				D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */,
+				D395CF8015B1427400FDF0E6 /* PPFirstViewController.m in Sources */,
+				D395CF8715B1427400FDF0E6 /* PPSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D395CF8C15B1427400FDF0E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D395CFA015B1427400FDF0E6 /* PassphraseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D395CF9715B1427400FDF0E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D395CF6115B1427400FDF0E6 /* Passphrase */;
+			targetProxy = D395CF9615B1427400FDF0E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D395CF6F15B1427400FDF0E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D395CF7015B1427400FDF0E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D395CF7915B1427400FDF0E6 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D395CF7C15B1427400FDF0E6 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D395CF9B15B1427400FDF0E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D395CF9C15B1427400FDF0E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D395CFA115B1427400FDF0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D395CFA215B1427400FDF0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D395CFA415B1427400FDF0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Passphrase/Passphrase-Prefix.pch";
+				INFOPLIST_FILE = "Passphrase/Passphrase-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D395CFA515B1427400FDF0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Passphrase/Passphrase-Prefix.pch";
+				INFOPLIST_FILE = "Passphrase/Passphrase-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D395CFA715B1427400FDF0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passphrase.app/Passphrase";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Passphrase/Passphrase-Prefix.pch";
+				INFOPLIST_FILE = "PassphraseTests/PassphraseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D395CFA815B1427400FDF0E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passphrase.app/Passphrase";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Passphrase/Passphrase-Prefix.pch";
+				INFOPLIST_FILE = "PassphraseTests/PassphraseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D395CF5C15B1427400FDF0E6 /* Build configuration list for PBXProject "Passphrase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D395CFA115B1427400FDF0E6 /* Debug */,
+				D395CFA215B1427400FDF0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D395CFA315B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "Passphrase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D395CFA415B1427400FDF0E6 /* Debug */,
+				D395CFA515B1427400FDF0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D395CFA615B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "PassphraseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D395CFA715B1427400FDF0E6 /* Debug */,
+				D395CFA815B1427400FDF0E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D395CF5915B1427400FDF0E6 /* Project object */;
+}
