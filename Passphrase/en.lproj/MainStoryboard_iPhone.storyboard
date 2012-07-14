@@ -50,11 +50,11 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xUh-i4-e19">
-                                <rect key="frame" x="107" y="354" width="107" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xUh-i4-e19">
+                                <rect key="frame" x="50" y="324" width="221" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
-                                <state key="normal" title="Generate">
+                                <state key="normal" image="GenerateButton.png">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -106,7 +106,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Saved" image="second" id="6"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
@@ -116,6 +116,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -132,9 +133,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GenerateButton.png" width="221" height="67"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="PPPassphraseGenerator" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPPassphraseGenerator.h"/>
+            <relationships>
+                <relationship kind="action" name="didTapGenerate:"/>
+                <relationship kind="outletCollection" name="generatedWords" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PPSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PPSecondViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

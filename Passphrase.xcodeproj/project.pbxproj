@@ -34,6 +34,10 @@
 		D395CFB615B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */; };
 		D395CFB815B148BA00FDF0E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFB715B148BA00FDF0E6 /* Security.framework */; };
 		D395CFB915B148E600FDF0E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFB715B148BA00FDF0E6 /* Security.framework */; };
+		D395CFC015B1D74400FDF0E6 /* GenerateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */; };
+		D395CFC115B1D74400FDF0E6 /* GenerateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */; };
+		D395CFC215B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */; };
+		D395CFC315B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,8 @@
 		D395CFB115B147C200FDF0E6 /* Rfc2898DeriveBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rfc2898DeriveBytes.h; sourceTree = "<group>"; };
 		D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rfc2898DeriveBytes.m; sourceTree = "<group>"; };
 		D395CFB715B148BA00FDF0E6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenerateButton.png; sourceTree = "<group>"; };
+		D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GenerateButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,8 @@
 		D395CF6C15B1427400FDF0E6 /* Passphrase */ = {
 			isa = PBXGroup;
 			children = (
+				D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */,
+				D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */,
 				D395CFAF15B147C200FDF0E6 /* NSData+EncryptionHelpers.h */,
 				D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */,
 				D395CFB115B147C200FDF0E6 /* Rfc2898DeriveBytes.h */,
@@ -274,6 +282,8 @@
 				D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */,
 				D395CF8915B1427400FDF0E6 /* second.png in Resources */,
 				D395CF8B15B1427400FDF0E6 /* second@2x.png in Resources */,
+				D395CFC015B1D74400FDF0E6 /* GenerateButton.png in Resources */,
+				D395CFC215B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D395CF9D15B1427400FDF0E6 /* InfoPlist.strings in Resources */,
+				D395CFC115B1D74400FDF0E6 /* GenerateButton.png in Resources */,
+				D395CFC315B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +509,7 @@
 				D395CFA515B1427400FDF0E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D395CFA615B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "PassphraseTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +518,7 @@
 				D395CFA815B1427400FDF0E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
