@@ -41,11 +41,11 @@
             </objects>
             <point key="canvasLocation" x="3041" y="150"/>
         </scene>
-        <!--Second View Controller - Second-->
+        <!--Master Passphrase Controller - Second-->
         <scene sceneID="13">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
-                <viewController id="3" customClass="PPSecondViewController" sceneMemberID="viewController">
+                <viewController id="3" customClass="PPMasterPassphraseController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="768" height="955"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

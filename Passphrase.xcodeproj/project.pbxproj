@@ -18,7 +18,7 @@
 		D395CF8015B1427400FDF0E6 /* PPPassphraseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */; };
 		D395CF8215B1427400FDF0E6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8115B1427400FDF0E6 /* first.png */; };
 		D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8315B1427400FDF0E6 /* first@2x.png */; };
-		D395CF8715B1427400FDF0E6 /* PPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */; };
+		D395CF8715B1427400FDF0E6 /* PPMasterPassphraseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */; };
 		D395CF8915B1427400FDF0E6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8815B1427400FDF0E6 /* second.png */; };
 		D395CF8B15B1427400FDF0E6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8A15B1427400FDF0E6 /* second@2x.png */; };
 		D395CF9315B1427400FDF0E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */; };
@@ -77,8 +77,8 @@
 		D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPassphraseGenerator.m; sourceTree = "<group>"; };
 		D395CF8115B1427400FDF0E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D395CF8315B1427400FDF0E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		D395CF8515B1427400FDF0E6 /* PPSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSecondViewController.h; sourceTree = "<group>"; };
-		D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSecondViewController.m; sourceTree = "<group>"; };
+		D395CF8515B1427400FDF0E6 /* PPMasterPassphraseController.h */ = {isa = PBXFileReference; path = PPMasterPassphraseController.h; sourceTree = "<group>"; };
+		D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMasterPassphraseController.m; sourceTree = "<group>"; };
 		D395CF8815B1427400FDF0E6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D395CF8A15B1427400FDF0E6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassphraseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,8 +182,8 @@
 				D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */,
 				D395CF8115B1427400FDF0E6 /* first.png */,
 				D395CF8315B1427400FDF0E6 /* first@2x.png */,
-				D395CF8515B1427400FDF0E6 /* PPSecondViewController.h */,
-				D395CF8615B1427400FDF0E6 /* PPSecondViewController.m */,
+				D395CF8515B1427400FDF0E6 /* PPMasterPassphraseController.h */,
+				D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */,
 				D395CF8815B1427400FDF0E6 /* second.png */,
 				D395CF8A15B1427400FDF0E6 /* second@2x.png */,
 				D395CF6D15B1427400FDF0E6 /* Supporting Files */,
@@ -351,7 +351,7 @@
 				D395CF7315B1427400FDF0E6 /* main.m in Sources */,
 				D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */,
 				D395CF8015B1427400FDF0E6 /* PPPassphraseGenerator.m in Sources */,
-				D395CF8715B1427400FDF0E6 /* PPSecondViewController.m in Sources */,
+				D395CF8715B1427400FDF0E6 /* PPMasterPassphraseController.m in Sources */,
 				D395CFAA15B146D100FDF0E6 /* diceware8k.c in Sources */,
 				D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
 				D395CFB515B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
