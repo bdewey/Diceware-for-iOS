@@ -10,4 +10,7 @@
 
 @interface PPFirstViewController : UIViewController
 
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *GeneratedWords;
+- (IBAction)didTapGenerate:(id)sender;
+
 @end
