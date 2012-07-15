@@ -11,6 +11,23 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+#import "NSData+EncryptionHelpers.h"
+#import "Rfc2898DeriveBytes.h"
 #endif
 
 char* getDiceWd (int n);
+
+//
+//  Core data entities
+//
+
+#define kEntityEncryptionMetadata                 @"EncryptionMetadata"
+#define kEntityResource                           @"Resource"
+#define kEntityPassphrase                         @"Passphrase"
+
+//
+//  Encryption validation byte pattern
+//
+
+#define kEncryptionValidationString               @"The key is valid"
+

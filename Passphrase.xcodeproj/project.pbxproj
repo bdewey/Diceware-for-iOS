@@ -48,6 +48,18 @@
 		D395CFD215B1F5DD00FDF0E6 /* BlackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */; };
 		D395CFD315B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */; };
 		D395CFD415B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */; };
+		D395CFD715B1FB5B00FDF0E6 /* PPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFD615B1FB5B00FDF0E6 /* PPResource.m */; };
+		D395CFD815B1FB5B00FDF0E6 /* PPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFD615B1FB5B00FDF0E6 /* PPResource.m */; };
+		D395CFDF15B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFDE15B1FB5C00FDF0E6 /* PPPassphrase.m */; };
+		D395CFE015B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFDE15B1FB5C00FDF0E6 /* PPPassphrase.m */; };
+		D395CFE315B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */; };
+		D395CFE415B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */; };
+		D395CFE615B310CF00FDF0E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFE515B310CF00FDF0E6 /* CoreData.framework */; };
+		D395CFE715B3113200FDF0E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFE515B310CF00FDF0E6 /* CoreData.framework */; };
+		D395CFEA15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */; };
+		D395CFEB15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */; };
+		D395CFEE15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */; };
+		D395CFEF15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +89,7 @@
 		D395CF7F15B1427400FDF0E6 /* PPPassphraseGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPassphraseGenerator.m; sourceTree = "<group>"; };
 		D395CF8115B1427400FDF0E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D395CF8315B1427400FDF0E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		D395CF8515B1427400FDF0E6 /* PPMasterPassphraseController.h */ = {isa = PBXFileReference; path = PPMasterPassphraseController.h; sourceTree = "<group>"; };
+		D395CF8515B1427400FDF0E6 /* PPMasterPassphraseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMasterPassphraseController.h; sourceTree = "<group>"; };
 		D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMasterPassphraseController.m; sourceTree = "<group>"; };
 		D395CF8815B1427400FDF0E6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D395CF8A15B1427400FDF0E6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -100,6 +112,17 @@
 		D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DoneButton@2x.png"; sourceTree = "<group>"; };
 		D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackground.png; sourceTree = "<group>"; };
 		D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackBackground@2x.png"; sourceTree = "<group>"; };
+		D395CFD515B1FB5B00FDF0E6 /* PPResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResource.h; sourceTree = "<group>"; };
+		D395CFD615B1FB5B00FDF0E6 /* PPResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResource.m; sourceTree = "<group>"; };
+		D395CFDD15B1FB5C00FDF0E6 /* PPPassphrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPassphrase.h; sourceTree = "<group>"; };
+		D395CFDE15B1FB5C00FDF0E6 /* PPPassphrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPassphrase.m; sourceTree = "<group>"; };
+		D395CFE115B30FD300FDF0E6 /* PPSavedPassphraseContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPSavedPassphraseContext.h; path = ../PPSavedPassphraseContext.h; sourceTree = "<group>"; };
+		D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPSavedPassphraseContext.m; path = ../PPSavedPassphraseContext.m; sourceTree = "<group>"; };
+		D395CFE515B310CF00FDF0E6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D395CFE815B315EA00FDF0E6 /* PPEncryptionMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEncryptionMetadata.h; sourceTree = "<group>"; };
+		D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPEncryptionMetadata.m; sourceTree = "<group>"; };
+		D395CFEC15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPEncryptionMetadata+Passphrase.h"; sourceTree = "<group>"; };
+		D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPEncryptionMetadata+Passphrase.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D395CFE615B310CF00FDF0E6 /* CoreData.framework in Frameworks */,
 				D395CFB815B148BA00FDF0E6 /* Security.framework in Frameworks */,
 				D395CF6715B1427400FDF0E6 /* UIKit.framework in Frameworks */,
 				D395CF6915B1427400FDF0E6 /* Foundation.framework in Frameworks */,
@@ -122,6 +146,7 @@
 				D395CF9415B1427400FDF0E6 /* UIKit.framework in Frameworks */,
 				D395CF9515B1427400FDF0E6 /* Foundation.framework in Frameworks */,
 				D395CFB915B148E600FDF0E6 /* Security.framework in Frameworks */,
+				D395CFE715B3113200FDF0E6 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +177,7 @@
 		D395CF6515B1427400FDF0E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D395CFE515B310CF00FDF0E6 /* CoreData.framework */,
 				D395CFB715B148BA00FDF0E6 /* Security.framework */,
 				D395CF6615B1427400FDF0E6 /* UIKit.framework */,
 				D395CF6815B1427400FDF0E6 /* Foundation.framework */,
@@ -189,6 +215,16 @@
 				D395CF6D15B1427400FDF0E6 /* Supporting Files */,
 				D395CFA915B146D100FDF0E6 /* diceware8k.c */,
 				D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */,
+				D395CFE815B315EA00FDF0E6 /* PPEncryptionMetadata.h */,
+				D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */,
+				D395CFDD15B1FB5C00FDF0E6 /* PPPassphrase.h */,
+				D395CFDE15B1FB5C00FDF0E6 /* PPPassphrase.m */,
+				D395CFD515B1FB5B00FDF0E6 /* PPResource.h */,
+				D395CFD615B1FB5B00FDF0E6 /* PPResource.m */,
+				D395CFE115B30FD300FDF0E6 /* PPSavedPassphraseContext.h */,
+				D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */,
+				D395CFEC15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.h */,
+				D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */,
 			);
 			path = Passphrase;
 			sourceTree = "<group>";
@@ -356,6 +392,11 @@
 				D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
 				D395CFB515B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
 				D395CFC715B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */,
+				D395CFD715B1FB5B00FDF0E6 /* PPResource.m in Sources */,
+				D395CFDF15B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */,
+				D395CFE315B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */,
+				D395CFEA15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */,
+				D395CFEE15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +409,11 @@
 				D395CFB415B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
 				D395CFB615B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
 				D395CFC815B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */,
+				D395CFD815B1FB5B00FDF0E6 /* PPResource.m in Sources */,
+				D395CFE015B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */,
+				D395CFE415B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */,
+				D395CFEB15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */,
+				D395CFEF15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
