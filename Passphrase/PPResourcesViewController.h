@@ -1,8 +1,8 @@
 //
-//  PPSecondViewController.h
+//  PPResourcesViewController.h
 //  Passphrase
 //
-//  Created by Brian Dewey on 7/13/12.
+//  Created by Brian Dewey on 7/15/12.
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
@@ -14,11 +14,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@interface PPMasterPassphraseController : UIViewController<UITextFieldDelegate>
+@interface PPResourcesViewController : UITableViewController
 
 @property (strong, nonatomic) PPSavedPassphraseContext *passphraseContext;
-@property (weak, nonatomic) IBOutlet UITextField *passphraseField;
-@property (weak, nonatomic) IBOutlet UIButton *doneButton;
-- (IBAction)didTapDone:(id)sender;
 
 @end

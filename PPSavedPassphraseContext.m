@@ -8,6 +8,7 @@
 
 #import <CommonCrypto/CommonCryptor.h>
 #import <CoreData/CoreData.h>
+#import "NSString+FileSystemHelper.h"
 #import "PPSavedPassphraseContext.h"
 #import "PPEncryptionMetadata.h"
 #import "PPEncryptionMetadata+Passphrase.h"
@@ -31,20 +32,23 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)unlockWithKey:(NSData *)key andInitializationVector:(NSData *)iv completion:(void (^)(BOOL success))completion {
++ (NSURL *)defaultURL {
+ 
+  NSString *path = [@"vault.dat" asPathInDocumentsFolder];
+  return [NSURL fileURLWithPath:path isDirectory:NO];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)prepareDocumentWhenCreated:(void (^)(BOOL))creationCallback whenOpened:(void (^)(BOOL))openCallback {
   
-  completion = [completion copy];
   if ([[NSFileManager defaultManager] fileExistsAtPath:self.document.fileURL.path]) {
     
     [self.document openWithCompletionHandler:^(BOOL success) {
       
-      if (success) {
+      if (openCallback) {
         
-        success = [self decryptDocumentEncryptionKeyWithKey:key andInitializationVector:iv];
-      }
-      if (completion) {
-        
-        completion(success);
+        openCallback(success);
       }
     }];
     
@@ -52,13 +56,9 @@
     
     [self.document saveToURL:self.document.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
       
-      if (success) {
+      if (creationCallback) {
         
-        success = [self initializeNewDocumentProtectedWithKey:key andInitializationVector:iv];
-      }
-      if (completion) {
-        
-        completion(success);
+        creationCallback(success);
       }
     }];
   }
@@ -68,30 +68,49 @@
 
 - (BOOL)decryptDocumentEncryptionKeyWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector {
   
-  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:kEntityEncryptionMetadata];
-  NSArray *metadataMatches = [self.document.managedObjectContext executeFetchRequest:fetchRequest error:NULL];
-  if (metadataMatches.count != 1) {
+  PPEncryptionMetadata *metadata = [self encryptionMetadata];
+  if (!metadata) {
     
     return NO;
   }
-  PPEncryptionMetadata *metadata = [metadataMatches objectAtIndex:0];
   _encryptionKey = [metadata.encryptionKey aesDecryptWithKey:key andIV:initializationVector];
   NSData *validationData = [metadata.encryptionValidation aesDecryptWithKey:_encryptionKey 
                                                                       andIV:metadata.encryptionValidationIV];
-  NSString *validationString = [NSString stringWithUTF8String:validationData.bytes];
+  NSString *validationString = nil;
+  @try {
+    validationString = [NSString stringWithUTF8String:validationData.bytes];
+  }
+  @finally {
+    
+    //
+    //  NOTHING
+    //
+  }
   return [validationString isEqualToString:kEncryptionValidationString];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (BOOL)initializeNewDocumentProtectedWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector {
+- (PPEncryptionMetadata *)initializeNewDocumentProtectedWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector {
   
   _encryptionKey = [NSData dataWithRandomBytes:kCCKeySizeAES128];
-  [PPEncryptionMetadata encryptionMetadataForKey:_encryptionKey 
+  return [PPEncryptionMetadata encryptionMetadataForKey:_encryptionKey 
                                 protectedWithKey:key 
                          andInitializationVector:initializationVector 
                           inManagedObjectContext:_document.managedObjectContext];
-  return YES;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (PPEncryptionMetadata *)encryptionMetadata {
+  
+  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:kEntityEncryptionMetadata];
+  NSArray *metadataMatches = [self.document.managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+  if (metadataMatches.count != 1) {
+    
+    return nil;
+  }
+  return [metadataMatches objectAtIndex:0];
 }
 
 

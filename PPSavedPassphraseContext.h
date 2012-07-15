@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+@class PPEncryptionMetadata;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @interface PPSavedPassphraseContext : NSObject
 
 @property (strong, nonatomic) UIManagedDocument *document;
 @property (strong, nonatomic) NSData *encryptionKey;
 
++ (NSURL *)defaultURL;
 - (id)initWithFileURL:(NSURL *)url;
-- (void)unlockWithKey:(NSData *)key andInitializationVector:(NSData *)iv completion:(void(^)(BOOL success))completion;
+- (void)prepareDocumentWhenCreated:(void(^)(BOOL success))creationCallback whenOpened:(void(^)(BOOL success))openCallback;
+- (BOOL)decryptDocumentEncryptionKeyWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector;
+- (PPEncryptionMetadata *)initializeNewDocumentProtectedWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector;
+- (PPEncryptionMetadata *)encryptionMetadata;
 
 @end

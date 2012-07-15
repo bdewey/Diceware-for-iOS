@@ -60,6 +60,10 @@
 		D395CFEB15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */; };
 		D395CFEE15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */; };
 		D395CFEF15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */; };
+		D395CFF215B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF115B3215B00FDF0E6 /* NSString+FileSystemHelper.m */; };
+		D395CFF315B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF115B3215B00FDF0E6 /* NSString+FileSystemHelper.m */; };
+		D395CFF615B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */; };
+		D395CFF715B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +127,10 @@
 		D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPEncryptionMetadata.m; sourceTree = "<group>"; };
 		D395CFEC15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPEncryptionMetadata+Passphrase.h"; sourceTree = "<group>"; };
 		D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPEncryptionMetadata+Passphrase.m"; sourceTree = "<group>"; };
+		D395CFF015B3215B00FDF0E6 /* NSString+FileSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FileSystemHelper.h"; path = "../../DropVault/Classes/NSString+FileSystemHelper.h"; sourceTree = "<group>"; };
+		D395CFF115B3215B00FDF0E6 /* NSString+FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FileSystemHelper.m"; path = "../../DropVault/Classes/NSString+FileSystemHelper.m"; sourceTree = "<group>"; };
+		D395CFF415B3288E00FDF0E6 /* PPResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResourcesViewController.h; sourceTree = "<group>"; };
+		D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResourcesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +198,8 @@
 		D395CF6C15B1427400FDF0E6 /* Passphrase */ = {
 			isa = PBXGroup;
 			children = (
+				D395CFF015B3215B00FDF0E6 /* NSString+FileSystemHelper.h */,
+				D395CFF115B3215B00FDF0E6 /* NSString+FileSystemHelper.m */,
 				D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */,
 				D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */,
 				D395CFC915B1F49E00FDF0E6 /* DoneButton.png */,
@@ -225,6 +235,8 @@
 				D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */,
 				D395CFEC15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.h */,
 				D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */,
+				D395CFF415B3288E00FDF0E6 /* PPResourcesViewController.h */,
+				D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */,
 			);
 			path = Passphrase;
 			sourceTree = "<group>";
@@ -397,6 +409,8 @@
 				D395CFE315B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */,
 				D395CFEA15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */,
 				D395CFEE15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */,
+				D395CFF215B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */,
+				D395CFF615B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +428,8 @@
 				D395CFE415B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */,
 				D395CFEB15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */,
 				D395CFEF15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */,
+				D395CFF315B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */,
+				D395CFF715B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

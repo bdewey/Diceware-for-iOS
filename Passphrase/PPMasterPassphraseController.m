@@ -6,7 +6,13 @@
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
+#import <CommonCrypto/CommonCryptor.h>
+#import "PPEncryptionMetadata.h"
 #import "PPMasterPassphraseController.h"
+#import "PPSavedPassphraseContext.h"
+#import "PPSavedPassphraseContext.h"
+#import "Rfc2898DeriveBytes.h"
+#import "PPResourcesViewController.h"
 
 @interface PPMasterPassphraseController ()
 
@@ -18,6 +24,7 @@
 
 @implementation PPMasterPassphraseController
 
+@synthesize passphraseContext                       = _passphraseContext;
 @synthesize passphraseField                         = _passphraseField;
 @synthesize doneButton                              = _doneButton;
 
@@ -59,9 +66,49 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  
+  if ([segue.identifier isEqualToString:@"ShowResources"]) {
+    
+    PPResourcesViewController *resources = segue.destinationViewController;
+    resources.passphraseContext = _passphraseContext;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 - (IBAction)didTapDone:(id)sender {
   
   [self.passphraseField resignFirstResponder];
+  _passphraseContext = [[PPSavedPassphraseContext alloc] initWithFileURL:[PPSavedPassphraseContext defaultURL]];
+  NSMutableData *key = [NSMutableData dataWithLength:kCCKeySizeAES128];
+  NSMutableData *iv  = [NSMutableData dataWithLength:kCCBlockSizeAES128];
+  [_passphraseContext prepareDocumentWhenCreated:^(BOOL success) {
+    
+    if (!success) {
+      
+      return;
+    }
+    NSData *salt = [NSData dataWithRandomBytes:kCCBlockSizeAES128];
+    [Rfc2898DeriveBytes deriveKey:key andIV:iv fromPassword:_passphraseField.text andSalt:salt];
+    PPEncryptionMetadata *metadata = [_passphraseContext initializeNewDocumentProtectedWithKey:key andInitializationVector:iv];
+    metadata.salt = salt;
+    
+  } whenOpened:^(BOOL success) {
+    
+    if (!success) {
+      
+      return;
+    }
+    
+    PPEncryptionMetadata *metadata = [_passphraseContext encryptionMetadata];
+    if (!metadata) {
+      
+      return;
+    }
+    [Rfc2898DeriveBytes deriveKey:key andIV:iv fromPassword:_passphraseField.text andSalt:metadata.salt];
+    [_passphraseContext decryptDocumentEncryptionKeyWithKey:key andInitializationVector:iv];
+  }];
 }
 
 #pragma mark - UITextFieldDelegate
