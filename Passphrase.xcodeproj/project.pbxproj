@@ -64,6 +64,8 @@
 		D395CFF315B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF115B3215B00FDF0E6 /* NSString+FileSystemHelper.m */; };
 		D395CFF615B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */; };
 		D395CFF715B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */; };
+		D395CFF915B3DC7900FDF0E6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFF815B3DC7900FDF0E6 /* Icon@2x.png */; };
+		D395CFFB15B3DC7E00FDF0E6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFFA15B3DC7E00FDF0E6 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		D395CFF115B3215B00FDF0E6 /* NSString+FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FileSystemHelper.m"; path = "../../DropVault/Classes/NSString+FileSystemHelper.m"; sourceTree = "<group>"; };
 		D395CFF415B3288E00FDF0E6 /* PPResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResourcesViewController.h; sourceTree = "<group>"; };
 		D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResourcesViewController.m; sourceTree = "<group>"; };
+		D395CFF815B3DC7900FDF0E6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D395CFFA15B3DC7E00FDF0E6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 		D395CF5715B1427400FDF0E6 = {
 			isa = PBXGroup;
 			children = (
+				D395CFFA15B3DC7E00FDF0E6 /* Icon.png */,
+				D395CFF815B3DC7900FDF0E6 /* Icon@2x.png */,
 				D395CF6C15B1427400FDF0E6 /* Passphrase */,
 				D395CF9815B1427400FDF0E6 /* PassphraseTests */,
 				D395CF6515B1427400FDF0E6 /* Frameworks */,
@@ -356,6 +362,8 @@
 				D395CFCD15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */,
 				D395CFD115B1F5DD00FDF0E6 /* BlackBackground.png in Resources */,
 				D395CFD315B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */,
+				D395CFF915B3DC7900FDF0E6 /* Icon@2x.png in Resources */,
+				D395CFFB15B3DC7E00FDF0E6 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
