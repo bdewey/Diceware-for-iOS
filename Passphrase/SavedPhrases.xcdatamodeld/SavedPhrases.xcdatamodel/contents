@@ -15,12 +15,13 @@
     </entity>
     <entity name="Resource" representedClassName="PPResource" syncable="YES">
         <attribute name="encryptedTitle" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="generationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="initializationVector" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="passphrases" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Passphrase" inverseName="resource" inverseEntity="Passphrase" syncable="YES"/>
     </entity>
     <elements>
         <element name="EncryptionMetadata" positionX="160" positionY="192" width="128" height="105"/>
         <element name="Passphrase" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Resource" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Resource" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>

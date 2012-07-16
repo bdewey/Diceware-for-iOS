@@ -57,6 +57,12 @@
 - (NSString *)aesDecryptStringWithKey:(NSData *)key andIV:(NSData *)iv;
 
 //
+//  Returns an encrypted version of a string.
+//
+
++ (NSData *)aesEncryptString:(NSString *)string withKey:(NSData *)key andIV:(NSData *)iv;
+
+//
 //  Encrypts the buffer using a specific |key| and |iv| (initialization vector).
 //  Returns the encrypted buffer.
 //

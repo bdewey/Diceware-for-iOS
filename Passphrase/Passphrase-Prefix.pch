@@ -13,6 +13,7 @@
     #import <Foundation/Foundation.h>
 #import "NSData+EncryptionHelpers.h"
 #import "Rfc2898DeriveBytes.h"
+#import "NSError+Passphrase.h"
 #endif
 
 char* getDiceWd (int n);

@@ -2,7 +2,7 @@
 //  PPResource.m
 //  Passphrase
 //
-//  Created by Brian Dewey on 7/14/12.
+//  Created by Brian Dewey on 7/16/12.
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
@@ -14,6 +14,7 @@
 
 @dynamic encryptedTitle;
 @dynamic initializationVector;
+@dynamic generationDate;
 @dynamic passphrases;
 
 @end

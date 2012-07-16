@@ -86,11 +86,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
                 <viewController title="Master Passphrase" id="3" customClass="PPMasterPassphraseController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="14" background="BlackBackground.png" id="VhS-I1-1PY">
-                                <rect key="frame" x="20" y="20" width="280" height="31"/>
+                                <rect key="frame" x="20" y="98" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
@@ -99,33 +99,34 @@
                                     <outlet property="delegate" destination="3" id="nUU-zp-0VN"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fcc-S9-JQw">
-                                <rect key="frame" x="50" y="59" width="221" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="DoneButton.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapDone:" destination="3" eventType="touchUpInside" id="uOx-Sg-flD"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your master passphrase protects all other passphrases." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YPS-EY-Qfp">
+                                <rect key="frame" x="20" y="0.0" width="280" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Master Passphrase" id="i1U-Nv-tTa"/>
+                    <navigationItem key="navigationItem" title="Master Passphrase" id="i1U-Nv-tTa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Qau-Sf-PCg">
+                            <connections>
+                                <action selector="didTapCancel:" destination="3" id="hBv-Ea-CSy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ipu-kW-cq0">
+                            <connections>
+                                <action selector="didTapDone:" destination="3" id="dX2-ac-YC5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="doneButton" destination="Fcc-S9-JQw" id="oRu-Em-4bS"/>
                         <outlet property="passphraseField" destination="VhS-I1-1PY" id="MuK-Lw-UpE"/>
-                        <segue destination="IaS-lz-au6" kind="push" identifier="ShowResources" id="Qz0-uy-WkE"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1243" y="505"/>
+            <point key="canvasLocation" x="2319" y="1149"/>
         </scene>
         <!--New Resource View Controller - New Resource-->
         <scene sceneID="TCL-1D-vq2">
@@ -183,7 +184,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2333" y="-98"/>
+            <point key="canvasLocation" x="2295" y="216"/>
         </scene>
         <!--Resources View Controller - Resources-->
         <scene sceneID="3H2-0w-Y8p">
@@ -195,12 +196,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResourceCell" id="SkS-Kg-RSm">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResourceCell" textLabel="22X-M1-gF4" detailTextLabel="Z7h-k3-fS9" style="IBUITableViewCellStyleSubtitle" id="SkS-Kg-RSm">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="22X-M1-gF4">
+                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z7h-k3-fS9">
+                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,9 +236,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ys1-3d-nAW" kind="modal" identifier="GetSavedPassphraseContext" id="9B0-4n-tM6"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1806" y="508"/>
+            <point key="canvasLocation" x="1186" y="505"/>
         </scene>
         <!--Navigation Controller - Saved-->
         <scene sceneID="kRX-eY-bZZ">
@@ -235,7 +255,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="3" kind="relationship" relationship="rootViewController" id="6jA-FQ-JzG"/>
+                        <segue destination="IaS-lz-au6" kind="relationship" relationship="rootViewController" id="vxZ-99-1sL"/>
                     </connections>
                 </navigationController>
             </objects>
@@ -278,12 +298,30 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1807" y="-98"/>
+            <point key="canvasLocation" x="1779" y="216"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bmX-Fi-VyC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wba-Tc-XmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="ys1-3d-nAW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="O2G-60-o20">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="N4J-Lt-RLE"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1793" y="1149"/>
         </scene>
     </scenes>
     <resources>
         <image name="BlackBackground.png" width="8" height="31"/>
-        <image name="DoneButton.png" width="221" height="66"/>
         <image name="GenerateButton.png" width="221" height="67"/>
         <image name="first.png" width="30" height="30"/>
         <image name="second.png" width="30" height="30"/>

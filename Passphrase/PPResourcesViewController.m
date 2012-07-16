@@ -6,15 +6,21 @@
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
+#import <CommonCrypto/CommonCryptor.h>
 #import <CoreData/CoreData.h>
 #import "PPResourcesViewController.h"
 #import "PPSavedPassphraseContext.h"
 #import "PPResource.h"
+#import "PPResource+Passphrase.h"
+#import "PPPassphrase.h"
+#import "PPPassphrase+Passphrase.h"
 #import "PPNewResourceViewController.h"
+#import "PPMasterPassphraseController.h"
 
 @interface PPResourcesViewController () <
   NSFetchedResultsControllerDelegate,
-  PPNewResourceViewControllerDelegate
+  PPNewResourceViewControllerDelegate,
+  PPMasterPassphraseControllerDelegate
 >
 
 @property (strong, nonatomic) NSFetchedResultsController *resourceResults;
@@ -67,11 +73,26 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+- (void)viewWillAppear:(BOOL)animated {
+  
+  if (!_passphraseContext) {
+    
+    [self performSegueWithIdentifier:@"GetSavedPassphraseContext" sender:self];
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   
   if ([segue.identifier isEqualToString:@"PresentNewResourceController"]) {
     
     PPNewResourceViewController *controller = (PPNewResourceViewController *)[segue.destinationViewController topViewController];
+    controller.delegate = self;
+    
+  } else if ([segue.identifier isEqualToString:@"GetSavedPassphraseContext"]) {
+    
+    PPMasterPassphraseController *controller = (PPMasterPassphraseController *)[segue.destinationViewController topViewController];
     controller.delegate = self;
   }
 }
@@ -89,26 +110,17 @@
 
 - (NSFetchedResultsController *)resourceResults {
   
-  if (!_resourceResults) {
+  if (!_resourceResults && _passphraseContext) {
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:kEntityResource];
-    NSSortDescriptor *sortByResourceName = [NSSortDescriptor sortDescriptorWithKey:@"encryptedTitle" 
-                                                                         ascending:YES 
-                                                                        comparator:^NSComparisonResult(id obj1, id obj2) {
-      
-      PPResource *resource1 = obj1;
-      PPResource *resource2 = obj2;
-      NSString *title1 = [resource1.encryptedTitle aesDecryptStringWithKey:_passphraseContext.encryptionKey 
-                                                                     andIV:resource1.initializationVector];
-      NSString *title2 = [resource2.encryptedTitle aesDecryptStringWithKey:_passphraseContext.encryptionKey 
-                                                                     andIV:resource2.initializationVector];
-      return [title1 caseInsensitiveCompare:title2];
-    }];
+    NSSortDescriptor *sortByResourceName = [NSSortDescriptor sortDescriptorWithKey:@"generationDate" 
+                                                                         ascending:NO];
     fetchRequest.sortDescriptors = [NSArray arrayWithObject:sortByResourceName];
     _resourceResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
                                                            managedObjectContext:_passphraseContext.document.managedObjectContext 
                                                              sectionNameKeyPath:nil 
                                                                       cacheName:nil];
+    _resourceResults.delegate = self;
   }
   return _resourceResults;
 }
@@ -138,12 +150,29 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   // Configure the cell...
+  [self configureCell:cell atIndexPath:indexPath];
+  return cell;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+  
   PPResource *resource = [self.resourceResults objectAtIndexPath:indexPath];
   NSString *resourceTitle = [resource.encryptedTitle aesDecryptStringWithKey:_passphraseContext.encryptionKey 
                                                                        andIV:resource.initializationVector];
+  PPPassphrase *latestPassphrase = nil;
+  for (PPPassphrase *passphrase in resource.passphrases) {
+    
+    if (passphrase.generationDate > latestPassphrase.generationDate) {
+      
+      latestPassphrase = passphrase;
+    }
+  }
+  NSString *clearphrase = [latestPassphrase.encryptedPhrase aesDecryptStringWithKey:_passphraseContext.encryptionKey 
+                                                                              andIV:latestPassphrase.initializationVector];
+  cell.detailTextLabel.text = clearphrase;
   cell.textLabel.text = resourceTitle;
-  
-  return cell;
 }
 
 /*
@@ -202,6 +231,72 @@
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+  
+  [self.tableView beginUpdates];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+  
+  switch(type) {
+    case NSFetchedResultsChangeInsert:
+      [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                    withRowAnimation:UITableViewRowAnimationFade];
+      break;
+      
+    case NSFetchedResultsChangeDelete:
+      [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                    withRowAnimation:UITableViewRowAnimationFade];
+      break;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+  
+  UITableView *tableView = self.tableView;
+  
+  switch(type) {
+      
+    case NSFetchedResultsChangeInsert:
+      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                       withRowAnimation:UITableViewRowAnimationFade];
+      break;
+      
+    case NSFetchedResultsChangeDelete:
+      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                       withRowAnimation:UITableViewRowAnimationFade];
+      break;
+      
+    case NSFetchedResultsChangeUpdate:
+      [self configureCell:[tableView cellForRowAtIndexPath:indexPath]
+              atIndexPath:indexPath];
+      break;
+      
+    case NSFetchedResultsChangeMove:
+      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                       withRowAnimation:UITableViewRowAnimationFade];
+      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                       withRowAnimation:UITableViewRowAnimationFade];
+      break;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+  [self.tableView endUpdates];
+}
+
 #pragma mark - PPNewResourceViewControllerDelegate
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -216,14 +311,41 @@
 - (void)newResourceViewControllerDidFinish:(PPNewResourceViewController *)sender {
   
   [sender dismissModalViewControllerAnimated:YES];
+  PPResource *resource = [PPResource resourceWithTitle:sender.resourceNameTextField.text 
+                                        protectedByKey:_passphraseContext.encryptionKey 
+                                inManagedObjectContext:_passphraseContext.document.managedObjectContext];
+  PPPassphrase *passphrase = [PPPassphrase passphraseForWords:sender.passphrase 
+                                             protectedWithKey:_passphraseContext.encryptionKey 
+                                       inManagedObjectContext:_passphraseContext.document.managedObjectContext];
+  [resource addPassphrasesObject:passphrase];
+  [_passphraseContext.document saveToURL:_passphraseContext.document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
 }
 
-#pragma mark - Instance methods
+#pragma mark - PPMasterPassphraseControllerDelegate
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)didTapAdd:(id)sender {
+- (void)masterPassphraseControllerDidCancel:(PPMasterPassphraseController *)controller {
+ 
+  [controller dismissModalViewControllerAnimated:YES];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)masterPassphraseControllerDidFinish:(PPMasterPassphraseController *)controller {
   
+  self.passphraseContext = controller.passphraseContext;
+  [controller dismissModalViewControllerAnimated:YES];
+  [self.resourceResults performFetch:NULL];
+  [self.tableView reloadData];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)masterPassphraseController:(PPMasterPassphraseController *)controller didFailWithError:(NSError *)error {
+  
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+  [alert show];
 }
 
 @end

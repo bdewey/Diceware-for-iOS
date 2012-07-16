@@ -24,6 +24,7 @@
 
 @implementation PPMasterPassphraseController
 
+@synthesize delegate                                = _delegate;
 @synthesize passphraseContext                       = _passphraseContext;
 @synthesize passphraseField                         = _passphraseField;
 @synthesize doneButton                              = _doneButton;
@@ -87,32 +88,45 @@
     
     if (!success) {
       
+      [self.delegate masterPassphraseController:self didFailWithError:[NSError pp_ioError]];
       return;
     }
     NSData *salt = [NSData dataWithRandomBytes:kCCBlockSizeAES128];
     [Rfc2898DeriveBytes deriveKey:key andIV:iv fromPassword:_passphraseField.text andSalt:salt];
     PPEncryptionMetadata *metadata = [_passphraseContext initializeNewDocumentProtectedWithKey:key andInitializationVector:iv];
     metadata.salt = salt;
-    [self performSegueWithIdentifier:@"ShowResources" sender:self];
+    [self.delegate masterPassphraseControllerDidFinish:self];
     
   } whenOpened:^(BOOL success) {
     
     if (!success) {
-      
+
+      [self.delegate masterPassphraseController:self didFailWithError:[NSError pp_ioError]];
       return;
     }
     
     PPEncryptionMetadata *metadata = [_passphraseContext encryptionMetadata];
     if (!metadata) {
       
+      [self.delegate masterPassphraseController:self didFailWithError:[NSError pp_corruptError]];
       return;
     }
     [Rfc2898DeriveBytes deriveKey:key andIV:iv fromPassword:_passphraseField.text andSalt:metadata.salt];
     if ([_passphraseContext decryptDocumentEncryptionKeyWithKey:key andInitializationVector:iv]) {
       
-      [self performSegueWithIdentifier:@"ShowResources" sender:self];
+      [self.delegate masterPassphraseControllerDidFinish:self];
+      
+    } else {
+      
+      _passphraseField.text = @"";
+      [_passphraseField becomeFirstResponder];
     }
   }];
+}
+
+- (IBAction)didTapCancel:(id)sender {
+  
+  [self.delegate masterPassphraseControllerDidCancel:self];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -121,7 +135,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
   
-  [textField resignFirstResponder];
+  [self didTapDone:self];
   return YES;
 }
 
