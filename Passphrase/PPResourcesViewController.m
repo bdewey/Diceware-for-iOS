@@ -24,6 +24,8 @@
 >
 
 @property (strong, nonatomic) NSFetchedResultsController *resourceResults;
+- (void)prepareToEnterBackground;
+- (void)didBecomeActive;
 
 @end
 
@@ -54,6 +56,12 @@
   [super viewDidLoad];
   
   [self.resourceResults performFetch:NULL];
+  [[NSNotificationCenter defaultCenter] addObserver:self 
+                                           selector:@selector(prepareToEnterBackground) 
+                                               name:kPPNotificationEnteredBackground 
+                                             object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBecomeActive) name:kPPNotificationDidBecomeActive object:nil];
+  
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
   
@@ -66,13 +74,14 @@
 - (void)viewDidUnload {
   
   [super viewDidUnload];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
   
   if (!_passphraseContext) {
     
@@ -174,44 +183,34 @@
   cell.textLabel.text = resourceTitle;
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }   
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }   
- }
- */
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
 
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
+  return YES;
+}
 
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if (editingStyle == UITableViewCellEditingStyleDelete) {
+    // Delete the row from the data source
+    
+    PPResource *resource = [self.resourceResults objectAtIndexPath:indexPath];
+    [_passphraseContext.document.managedObjectContext deleteObject:resource];
+    [_passphraseContext.document saveToURL:_passphraseContext.document.fileURL 
+                          forSaveOperation:UIDocumentSaveForOverwriting 
+                         completionHandler:nil];
+  }   
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+
+  return NO;
+}
 
 #pragma mark - Table view delegate
 
@@ -345,6 +344,24 @@
   
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
   [alert show];
+}
+
+#pragma mark - Instance methods
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)prepareToEnterBackground {
+  
+  self.passphraseContext = nil;
+  self.resourceResults = nil;
+  [self.tableView reloadData];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)didBecomeActive {
+  
+  [self viewDidAppear:NO];
 }
 
 @end

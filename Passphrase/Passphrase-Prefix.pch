@@ -27,6 +27,13 @@ char* getDiceWd (int n);
 #define kEntityPassphrase                         @"Passphrase"
 
 //
+//  Notifications
+//
+
+#define kPPNotificationEnteredBackground          @"kPPNotificationEnteredBackground"
+#define kPPNotificationDidBecomeActive            @"kPPNotificationDidBecomeActive"
+
+//
 //  Encryption validation byte pattern
 //
 
