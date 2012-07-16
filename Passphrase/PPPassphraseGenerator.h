@@ -1,16 +1,20 @@
 //
-//  PPFirstViewController.h
+//  PPPassphraseGenerator.h
 //  Passphrase
 //
-//  Created by Brian Dewey on 7/13/12.
+//  Created by Brian Dewey on 7/15/12.
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface PPPassphraseGenerator : UIViewController
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *generatedWords;
-- (IBAction)didTapGenerate:(id)sender;
+@interface PPPassphraseGenerator : NSObject
+
++ (NSArray *)passphraseWithWordCount:(NSUInteger)wordCount;
++ (NSArray *)passphraseWithWordCount:(NSUInteger)wordCount includeDiceDigits:(BOOL)includeDiceDigits;
 
 @end

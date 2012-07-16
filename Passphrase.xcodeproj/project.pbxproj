@@ -68,6 +68,8 @@
 		D395CFFB15B3DC7E00FDF0E6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFFA15B3DC7E00FDF0E6 /* Icon.png */; };
 		D395CFFE15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFFD15B3E98F00FDF0E6 /* PPNewResourceViewController.m */; };
 		D395CFFF15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFFD15B3E98F00FDF0E6 /* PPNewResourceViewController.m */; };
+		D395D00215B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00115B3F21200FDF0E6 /* PPPassphraseGenerator.m */; };
+		D395D00315B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00115B3F21200FDF0E6 /* PPPassphraseGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,8 @@
 		D395CFFA15B3DC7E00FDF0E6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D395CFFC15B3E98E00FDF0E6 /* PPNewResourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNewResourceViewController.h; sourceTree = "<group>"; };
 		D395CFFD15B3E98F00FDF0E6 /* PPNewResourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNewResourceViewController.m; sourceTree = "<group>"; };
+		D395D00015B3F21200FDF0E6 /* PPPassphraseGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPassphraseGenerator.h; sourceTree = "<group>"; };
+		D395D00115B3F21200FDF0E6 /* PPPassphraseGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPassphraseGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +253,8 @@
 				D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */,
 				D395CFFC15B3E98E00FDF0E6 /* PPNewResourceViewController.h */,
 				D395CFFD15B3E98F00FDF0E6 /* PPNewResourceViewController.m */,
+				D395D00015B3F21200FDF0E6 /* PPPassphraseGenerator.h */,
+				D395D00115B3F21200FDF0E6 /* PPPassphraseGenerator.m */,
 			);
 			path = Passphrase;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				D395CFF215B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */,
 				D395CFF615B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */,
 				D395CFFE15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */,
+				D395D00215B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +453,7 @@
 				D395CFF315B3215B00FDF0E6 /* NSString+FileSystemHelper.m in Sources */,
 				D395CFF715B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */,
 				D395CFFF15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */,
+				D395D00315B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

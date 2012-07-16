@@ -1,8 +1,8 @@
 //
-//  PPFirstViewController.m
+//  PPPassphraseGenerator.m
 //  Passphrase
 //
-//  Created by Brian Dewey on 7/13/12.
+//  Created by Brian Dewey on 7/15/12.
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
@@ -13,58 +13,21 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@interface PPPassphraseGenerator ()
-
-- (NSString *)diceDigitsForIndex:(unsigned int)index;
-
-@end
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
 @implementation PPPassphraseGenerator
-@synthesize generatedWords;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)viewDidLoad {
-  
-  [super viewDidLoad];
-  
-  NSArray *testWords = [NSArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", @"Fifth", nil];
-  for (int i = 0; i < testWords.count; i++) {
-    
-    UILabel *label = [self.generatedWords objectAtIndex:i];
-    label.text = [testWords objectAtIndex:i];
-  }
++ (NSArray *)passphraseWithWordCount:(NSUInteger)wordCount {
+
+  return [PPPassphraseGenerator passphraseWithWordCount:wordCount includeDiceDigits:NO];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)viewDidUnload {
++ (NSArray *)passphraseWithWordCount:(NSUInteger)wordCount includeDiceDigits:(BOOL)includeDiceDigits {
   
-  [self setGeneratedWords:nil];
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-  
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-  } else {
-    return YES;
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-- (IBAction)didTapGenerate:(id)sender {
-  
-  for (int i = 0; i < 5; i++) {
+  NSMutableArray *results = [NSMutableArray arrayWithCapacity:wordCount];
+  for (NSUInteger i = 0; i < wordCount; i++) {
     
     unsigned int trimmed = 0x1FFF;
     while (trimmed >= 7776) {
@@ -74,14 +37,18 @@
     }
     char *word = getDiceWd(trimmed);
     NSString *randomWord = [NSString stringWithUTF8String:word];
-    UILabel *label = [self.generatedWords objectAtIndex:i];
-    label.text = [NSString stringWithFormat:@"%@ %@", [self diceDigitsForIndex:trimmed], randomWord];
+    if (includeDiceDigits) {
+      
+      randomWord = [NSString stringWithFormat:@"%@ %@", [PPPassphraseGenerator diceDigitsForIndex:trimmed], randomWord];
+    }
+    [results addObject:randomWord];
   }
+  return results;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (NSString *)diceDigitsForIndex:(unsigned int)index {
++ (NSString *)diceDigitsForIndex:(unsigned int)index {
   
   NSMutableString *result = [NSMutableString stringWithString:@"00000"];
   for (int i = 0; i < 5; i++) {
@@ -92,5 +59,6 @@
   }
   return result;
 }
+
 
 @end

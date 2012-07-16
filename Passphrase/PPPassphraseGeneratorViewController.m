@@ -8,6 +8,7 @@
 
 #import "PPPassphraseGeneratorViewController.h"
 #import "NSData+EncryptionHelpers.h"
+#import "PPPassphraseGenerator.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -64,18 +65,12 @@
 
 - (IBAction)didTapGenerate:(id)sender {
   
-  for (int i = 0; i < 5; i++) {
+  NSArray *results = [PPPassphraseGenerator passphraseWithWordCount:5 includeDiceDigits:YES];
+  for (int i = 0; i < results.count; i++) {
     
-    unsigned int trimmed = 0x1FFF;
-    while (trimmed >= 7776) {
-      NSData *randomBytes = [NSData dataWithRandomBytes:sizeof(int)];
-      const unsigned int *bytes = randomBytes.bytes;
-      trimmed = *bytes & 0x1FFF;
-    }
-    char *word = getDiceWd(trimmed);
-    NSString *randomWord = [NSString stringWithUTF8String:word];
+    NSString *randomWord = [results objectAtIndex:i];
     UILabel *label = [self.generatedWords objectAtIndex:i];
-    label.text = [NSString stringWithFormat:@"%@ %@", [self diceDigitsForIndex:trimmed], randomWord];
+    label.text = randomWord;
   }
 }
 
