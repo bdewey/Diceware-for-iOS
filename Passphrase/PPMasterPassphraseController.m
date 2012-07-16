@@ -13,6 +13,7 @@
 #import "PPSavedPassphraseContext.h"
 #import "Rfc2898DeriveBytes.h"
 #import "PPResourcesViewController.h"
+#import "PPPassphraseGenerator.h"
 
 @interface PPMasterPassphraseController ()
 
@@ -28,12 +29,24 @@
 @synthesize passphraseContext                       = _passphraseContext;
 @synthesize passphraseField                         = _passphraseField;
 @synthesize doneButton                              = _doneButton;
+@synthesize suggestionLabel = _suggestionLabel;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)viewDidLoad {
 
   [super viewDidLoad];
+  NSMutableString *examplePassphrase = [NSMutableString string];
+  NSArray *words = [PPPassphraseGenerator passphraseWithWordCount:5 includeDiceDigits:NO];
+  for (NSString *word in words) {
+    
+    if (examplePassphrase.length > 0) {
+      
+      [examplePassphrase appendString:@" "];
+    }
+    [examplePassphrase appendString:word];
+  }
+  _suggestionLabel.text = [NSString stringWithFormat:@"How about \"%@\"?", examplePassphrase];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -43,6 +56,7 @@
 
   [self setDoneButton:nil];
   [self setPassphraseField:nil];
+  [self setSuggestionLabel:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
 }

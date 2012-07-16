@@ -21,6 +21,7 @@
 @property (strong, nonatomic) PPSavedPassphraseContext *passphraseContext;
 @property (weak, nonatomic) IBOutlet UITextField *passphraseField;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (weak, nonatomic) IBOutlet UILabel *suggestionLabel;
 - (IBAction)didTapDone:(id)sender;
 - (IBAction)didTapCancel:(id)sender;
 

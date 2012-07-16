@@ -106,6 +106,13 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How about &quot;&quot;?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rjO-wv-fBm">
+                                <rect key="frame" x="20" y="137" width="280" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -123,6 +130,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="passphraseField" destination="VhS-I1-1PY" id="MuK-Lw-UpE"/>
+                        <outlet property="suggestionLabel" destination="rjO-wv-fBm" id="3eU-we-38S"/>
                     </connections>
                 </viewController>
             </objects>
