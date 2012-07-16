@@ -6,12 +6,19 @@
 //  Copyright (c) 2012 Brian's Brain. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "PPResourcesViewController.h"
 #import "PPSavedPassphraseContext.h"
+#import "PPResource.h"
+#import "PPNewResourceViewController.h"
 
-@interface PPResourcesViewController ()
+@interface PPResourcesViewController () <
+  NSFetchedResultsControllerDelegate,
+  PPNewResourceViewControllerDelegate
+>
 
-- (void)didTapAdd:(id)sender;
+@property (strong, nonatomic) NSFetchedResultsController *resourceResults;
+- (IBAction)didTapAdd:(id)sender;
 
 @end
 
@@ -22,6 +29,7 @@
 @implementation PPResourcesViewController
 
 @synthesize passphraseContext                     = _passphraseContext;
+@synthesize resourceResults                       = _resourceResults;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -40,10 +48,7 @@
   
   [super viewDidLoad];
   
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
-                                                                                         target:self 
-                                                                                         action:@selector(didTapAdd:)];
-  
+  [self.resourceResults performFetch:NULL];
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
   
@@ -62,9 +67,50 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  
+  if ([segue.identifier isEqualToString:@"PresentNewResourceController"]) {
+    
+    PPNewResourceViewController *controller = (PPNewResourceViewController *)[segue.destinationViewController topViewController];
+    controller.delegate = self;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Properties
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (NSFetchedResultsController *)resourceResults {
+  
+  if (!_resourceResults) {
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:kEntityResource];
+    NSSortDescriptor *sortByResourceName = [NSSortDescriptor sortDescriptorWithKey:@"encryptedTitle" 
+                                                                         ascending:YES 
+                                                                        comparator:^NSComparisonResult(id obj1, id obj2) {
+      
+      PPResource *resource1 = obj1;
+      PPResource *resource2 = obj2;
+      NSString *title1 = [resource1.encryptedTitle aesDecryptStringWithKey:_passphraseContext.encryptionKey 
+                                                                     andIV:resource1.initializationVector];
+      NSString *title2 = [resource2.encryptedTitle aesDecryptStringWithKey:_passphraseContext.encryptionKey 
+                                                                     andIV:resource2.initializationVector];
+      return [title1 caseInsensitiveCompare:title2];
+    }];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObject:sortByResourceName];
+    _resourceResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+                                                           managedObjectContext:_passphraseContext.document.managedObjectContext 
+                                                             sectionNameKeyPath:nil 
+                                                                      cacheName:nil];
+  }
+  return _resourceResults;
 }
 
 #pragma mark - Table view data source
@@ -73,28 +119,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   
-#warning Potentially incomplete method implementation.
-  // Return the number of sections.
-  return 0;
+  return [[self.resourceResults sections] count];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   
-#warning Incomplete method implementation.
-  // Return the number of rows in the section.
-  return 0;
+  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.resourceResults sections] objectAtIndex:section];
+  return [sectionInfo numberOfObjects];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
-  static NSString *CellIdentifier = @"Cell";
+  static NSString *CellIdentifier = @"ResourceCell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   // Configure the cell...
+  PPResource *resource = [self.resourceResults objectAtIndexPath:indexPath];
+  NSString *resourceTitle = [resource.encryptedTitle aesDecryptStringWithKey:_passphraseContext.encryptionKey 
+                                                                       andIV:resource.initializationVector];
+  cell.textLabel.text = resourceTitle;
   
   return cell;
 }
@@ -151,6 +198,24 @@
    // Pass the selected object to the new view controller.
    [self.navigationController pushViewController:detailViewController animated:YES];
    */
+}
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+#pragma mark - PPNewResourceViewControllerDelegate
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)newResourceViewControllerDidCancel:(PPNewResourceViewController *)sender {
+  
+  [sender dismissModalViewControllerAnimated:YES];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)newResourceViewControllerDidFinish:(PPNewResourceViewController *)sender {
+  
+  [sender dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - Instance methods

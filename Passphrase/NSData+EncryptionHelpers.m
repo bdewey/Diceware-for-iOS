@@ -93,6 +93,23 @@
   }
 }
 
+- (NSString *)aesDecryptStringWithKey:(NSData *)key andIV:(NSData *)iv {
+  
+  NSData *decryptedData = [self aesDecryptWithKey:key andIV:iv];
+  NSString *result;
+  @try {
+    
+    result = [NSString stringWithUTF8String:decryptedData.bytes];
+  }
+  @catch (NSException *exception) {
+
+    //
+    //  NOTHING
+    //
+  }
+  return result;
+}
+
 - (NSData *)aesEncryptWithKey:(NSData *)key andIV:(NSData *)iv {
   NSMutableData *buffer = [NSMutableData dataWithLength:self.length];
   size_t moved;

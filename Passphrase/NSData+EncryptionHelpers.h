@@ -51,6 +51,12 @@
 - (NSData *)aesDecryptWithKey:(NSData *)key andIV:(NSData *)iv;
 
 //
+//  Decrypts a data block and inteprets the results as a UTF-8 string.
+//
+
+- (NSString *)aesDecryptStringWithKey:(NSData *)key andIV:(NSData *)iv;
+
+//
 //  Encrypts the buffer using a specific |key| and |iv| (initialization vector).
 //  Returns the encrypted buffer.
 //

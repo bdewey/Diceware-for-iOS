@@ -93,6 +93,7 @@
     [Rfc2898DeriveBytes deriveKey:key andIV:iv fromPassword:_passphraseField.text andSalt:salt];
     PPEncryptionMetadata *metadata = [_passphraseContext initializeNewDocumentProtectedWithKey:key andInitializationVector:iv];
     metadata.salt = salt;
+    [self performSegueWithIdentifier:@"ShowResources" sender:self];
     
   } whenOpened:^(BOOL success) {
     
@@ -107,7 +108,10 @@
       return;
     }
     [Rfc2898DeriveBytes deriveKey:key andIV:iv fromPassword:_passphraseField.text andSalt:metadata.salt];
-    [_passphraseContext decryptDocumentEncryptionKeyWithKey:key andInitializationVector:iv];
+    if ([_passphraseContext decryptDocumentEncryptionKeyWithKey:key andInitializationVector:iv]) {
+      
+      [self performSegueWithIdentifier:@"ShowResources" sender:self];
+    }
   }];
 }
 

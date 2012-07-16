@@ -80,7 +80,7 @@
   @try {
     validationString = [NSString stringWithUTF8String:validationData.bytes];
   }
-  @finally {
+  @catch (NSException *) {
     
     //
     //  NOTHING
