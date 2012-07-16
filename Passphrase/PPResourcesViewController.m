@@ -24,7 +24,6 @@
 >
 
 @property (strong, nonatomic) NSFetchedResultsController *resourceResults;
-- (IBAction)didTapAdd:(id)sender;
 
 @end
 
