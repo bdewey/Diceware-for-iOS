@@ -19,6 +19,7 @@
 @property (weak, nonatomic) id<PPNewResourceViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITextField *resourceNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *passphraseDisplay;
+@property (strong, nonatomic) NSArray *passphrase;
 
 - (IBAction)didTapCancel:(id)sender;
 - (IBAction)didTapDone:(id)sender;

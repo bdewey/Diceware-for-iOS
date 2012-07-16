@@ -7,6 +7,7 @@
 //
 
 #import "PPNewResourceViewController.h"
+#import "PPPassphraseGenerator.h"
 
 @interface PPNewResourceViewController ()
 
@@ -19,8 +20,9 @@
 @implementation PPNewResourceViewController
 
 @synthesize delegate                              = _delegate;
-@synthesize resourceNameTextField = _resourceNameTextField;
-@synthesize passphraseDisplay = _passphraseDisplay;
+@synthesize resourceNameTextField                 = _resourceNameTextField;
+@synthesize passphraseDisplay                     = _passphraseDisplay;
+@synthesize passphrase                            = _passphrase;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -38,17 +40,30 @@
 - (void)viewDidLoad {
   
   [super viewDidLoad];
-	// Do any additional setup after loading the view.
+  _passphrase = [PPPassphraseGenerator passphraseWithWordCount:5 includeDiceDigits:NO];
+  NSMutableString *passphraseDisplayString = [NSMutableString string];
+  for (NSString *word in _passphrase) {
+    
+    [passphraseDisplayString appendFormat:@"%@\n", word];
+  }
+  _passphraseDisplay.text = passphraseDisplayString;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)viewDidUnload {
   
-    [self setResourceNameTextField:nil];
-    [self setPassphraseDisplay:nil];
+  [self setResourceNameTextField:nil];
+  [self setPassphraseDisplay:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)viewDidAppear:(BOOL)animated {
+  
+  [_resourceNameTextField becomeFirstResponder];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
