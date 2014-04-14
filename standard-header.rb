@@ -1,3 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+LICENSE =<<EOF
 //  Copyright (c) 2014 Brian Dewey <bdewey@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,25 +22,32 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+EOF
 
-#import <Foundation/Foundation.h>
+if ARGV.length == 0
+  raise "You must enter a filespec"
+end
 
-@class PPEncryptionMetadata;
+FILESPEC = ARGV[0]
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@interface PPSavedPassphraseContext : NSObject
-
-@property (strong, nonatomic) UIManagedDocument *document;
-@property (strong, nonatomic) NSData *encryptionKey;
-
-+ (NSURL *)defaultURL;
-- (id)initWithFileURL:(NSURL *)url;
-- (void)prepareDocumentWhenCreated:(void(^)(BOOL success))creationCallback whenOpened:(void(^)(BOOL success))openCallback;
-- (BOOL)decryptDocumentEncryptionKeyWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector;
-- (PPEncryptionMetadata *)initializeNewDocumentProtectedWithKey:(NSData *)key andInitializationVector:(NSData *)initializationVector;
-- (PPEncryptionMetadata *)encryptionMetadata;
-
-@end
+Dir.glob(File.join("**", FILESPEC)) do |file|  
+  should_output_line = false
+  output_any_lines = false
+  modified_file = file + ".license"
+  File.open(modified_file, "w") do |output_file|
+    IO.foreach(file) do |line|
+      if line !~ /^\/\/.*$/ then
+        should_output_line = true
+      end
+      if should_output_line && !output_any_lines then
+        output_file.write LICENSE
+      end
+      if should_output_line then
+        output_any_lines = true
+        output_file.write line
+      end
+    end
+  end
+  FileUtils.mv(modified_file, file)
+  puts file
+end
