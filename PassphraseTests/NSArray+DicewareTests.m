@@ -19,26 +19,33 @@
 //  THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
-#import "diceware_wordlist.h"
-#import "beale_wordlist.h"
-#import "NSString+Diceware.h"
 
-@interface NSString_Diceware : XCTestCase
+#import "NSArray+Diceware.h"
+
+@interface NSArray_DicewareTests : XCTestCase
 
 @end
 
-@implementation NSString_Diceware
+@implementation NSArray_DicewareTests
 
-- (void)testSimpleLookup
+- (void)setUp
 {
-  XCTAssertEqualObjects(@"ablaze", [NSString pp_wordAtIndex:29 fromDicewareWordlist:beale_wordlist], @"");
+  [super setUp];
+  // Put setup code here; it will be run once, before the first test case.
+}
+
+- (void)tearDown
+{
+  // Put teardown code here; it will be run once, after the last test case.
+  [super tearDown];
 }
 
 - (void)testBoundaries
 {
-  XCTAssertEqualObjects(@"a", [NSString pp_wordAtIndex:0 fromDicewareWordlist:diceware_wordlist], @"");
-  XCTAssertEqualObjects(@"@", [NSString pp_wordAtIndex:kWordlistCount-1 fromDicewareWordlist:diceware_wordlist], @"");
-  XCTAssertThrowsSpecificNamed([NSString pp_wordAtIndex:kWordlistCount fromDicewareWordlist:diceware_wordlist], NSException, NSInvalidArgumentException, @"");
+  XCTAssertEqualObjects((@[@1, @1, @1, @1, @1]), [NSArray pp_arrayFromDicewareNumber:0], @"");
+  XCTAssertEqualObjects((@[@1, @1, @1, @2, @1]), [NSArray pp_arrayFromDicewareNumber:6], @"");
+  XCTAssertEqualObjects((@[@6, @6, @6, @6, @6]), [NSArray pp_arrayFromDicewareNumber:kDicewareWordlistCount-1], @"");
+  XCTAssertThrowsSpecificNamed([NSArray pp_arrayFromDicewareNumber:kDicewareWordlistCount], NSException, NSInternalInconsistencyException, @"");
 }
 
 @end

@@ -18,26 +18,19 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "NSArray+Diceware.h"
-#import "NSString+Diceware.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSString (Diceware)
+extern const NSUInteger kDicewareWordlistCount;
 
-+ (NSString *)pp_wordAtIndex:(NSUInteger)index fromDicewareWordlist:(char **)wordlist
-{
-  PPThrowIfInvalidDicewareNumber(index);
-  char *cstring = wordlist[index];
-  return [NSString stringWithCString:cstring encoding:NSUTF8StringEncoding];
-}
+/**
+ A diceware number is an unsigned integer in the range [0..7775]
+ */
+typedef NSUInteger PPDicewareNumber;
 
-+ (NSString *)pp_dicewareStringFromNumber:(PPDicewareNumber)number
-{
-  NSMutableString *results = [[NSMutableString alloc] init];
-  NSArray *components = [NSArray pp_arrayFromDicewareNumber:number];
-  for (NSNumber *component in components) {
-    [results appendFormat:@"%u", [component unsignedIntValue]];
+NS_INLINE void PPThrowIfInvalidDicewareNumber(PPDicewareNumber dicewareNumber) {
+  if (dicewareNumber >= kDicewareWordlistCount) {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Diceware number out of range"
+                                 userInfo:@{@"diceware_number": @(dicewareNumber)}];
   }
-  return [results copy];
 }
-
-@end

@@ -18,26 +18,16 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "NSArray+Diceware.h"
-#import "NSString+Diceware.h"
+#import <Foundation/Foundation.h>
+#import "diceware-definitions.h"
 
-@implementation NSString (Diceware)
+@interface NSArray (Diceware)
 
-+ (NSString *)pp_wordAtIndex:(NSUInteger)index fromDicewareWordlist:(char **)wordlist
-{
-  PPThrowIfInvalidDicewareNumber(index);
-  char *cstring = wordlist[index];
-  return [NSString stringWithCString:cstring encoding:NSUTF8StringEncoding];
-}
-
-+ (NSString *)pp_dicewareStringFromNumber:(PPDicewareNumber)number
-{
-  NSMutableString *results = [[NSMutableString alloc] init];
-  NSArray *components = [NSArray pp_arrayFromDicewareNumber:number];
-  for (NSNumber *component in components) {
-    [results appendFormat:@"%u", [component unsignedIntValue]];
-  }
-  return [results copy];
-}
+/**
+ Converts a diceware number into an array of dice-roll values.
+ 0 becomes @[1, 1, 1, 1, 1]
+ 7775 is @[6, 6, 6, 6, 6]
+ */
++ (NSArray *)pp_arrayFromDicewareNumber:(PPDicewareNumber)number;
 
 @end

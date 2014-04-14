@@ -53,9 +53,14 @@
 		D5E9BA3018FC80E100A28D05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6815B1427400FDF0E6 /* Foundation.framework */; };
 		D5E9BA3118FC80E100A28D05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6615B1427400FDF0E6 /* UIKit.framework */; };
 		D5E9BA3718FC80E100A28D05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5E9BA3518FC80E100A28D05 /* InfoPlist.strings */; };
-		D5E9BA4118FC815B00A28D05 /* NSString+Diceware.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4018FC815B00A28D05 /* NSString+Diceware.m */; };
+		D5E9BA4118FC815B00A28D05 /* NSString+DicewareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4018FC815B00A28D05 /* NSString+DicewareTests.m */; };
 		D5E9BA4218FC823000A28D05 /* diceware_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */; };
 		D5E9BA4318FC823600A28D05 /* beale_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */; };
+		D5E9BA4618FC869400A28D05 /* NSArray+Diceware.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4518FC869400A28D05 /* NSArray+Diceware.m */; };
+		D5E9BA4718FC869400A28D05 /* NSArray+Diceware.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4518FC869400A28D05 /* NSArray+Diceware.m */; };
+		D5E9BA4A18FC877700A28D05 /* diceware-definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4918FC877700A28D05 /* diceware-definitions.m */; };
+		D5E9BA4B18FC877700A28D05 /* diceware-definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4918FC877700A28D05 /* diceware-definitions.m */; };
+		D5E9BA4D18FC89A300A28D05 /* NSArray+DicewareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4C18FC89A300A28D05 /* NSArray+DicewareTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +144,12 @@
 		D5E9BA3418FC80E100A28D05 /* PassphraseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassphraseTests-Info.plist"; sourceTree = "<group>"; };
 		D5E9BA3618FC80E100A28D05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5E9BA3A18FC80E100A28D05 /* PassphraseTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PassphraseTests-Prefix.pch"; sourceTree = "<group>"; };
-		D5E9BA4018FC815B00A28D05 /* NSString+Diceware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Diceware.m"; sourceTree = "<group>"; };
+		D5E9BA4018FC815B00A28D05 /* NSString+DicewareTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DicewareTests.m"; sourceTree = "<group>"; };
+		D5E9BA4418FC869400A28D05 /* NSArray+Diceware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Diceware.h"; sourceTree = "<group>"; };
+		D5E9BA4518FC869400A28D05 /* NSArray+Diceware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Diceware.m"; sourceTree = "<group>"; };
+		D5E9BA4818FC870100A28D05 /* diceware-definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "diceware-definitions.h"; sourceTree = "<group>"; };
+		D5E9BA4918FC877700A28D05 /* diceware-definitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "diceware-definitions.m"; sourceTree = "<group>"; };
+		D5E9BA4C18FC89A300A28D05 /* NSArray+DicewareTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DicewareTests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +222,8 @@
 				D5E9BA2118FC795C00A28D05 /* beale_wordlist.h */,
 				D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */,
 				D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */,
+				D5E9BA4918FC877700A28D05 /* diceware-definitions.m */,
+				D5E9BA4818FC870100A28D05 /* diceware-definitions.h */,
 				D395CFA915B146D100FDF0E6 /* diceware8k.c */,
 				D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */,
 				D5E9BA2218FC799F00A28D05 /* diceware_wordlist.h */,
@@ -223,6 +235,8 @@
 				D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */,
 				D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */,
 				D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */,
+				D5E9BA4418FC869400A28D05 /* NSArray+Diceware.h */,
+				D5E9BA4518FC869400A28D05 /* NSArray+Diceware.m */,
 				D395CFAF15B147C200FDF0E6 /* NSData+EncryptionHelpers.h */,
 				D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */,
 				D395D00415B3FA0600FDF0E6 /* NSError+Passphrase.h */,
@@ -280,7 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				D5E9BA3318FC80E100A28D05 /* Supporting Files */,
-				D5E9BA4018FC815B00A28D05 /* NSString+Diceware.m */,
+				D5E9BA4018FC815B00A28D05 /* NSString+DicewareTests.m */,
+				D5E9BA4C18FC89A300A28D05 /* NSArray+DicewareTests.m */,
 			);
 			path = PassphraseTests;
 			sourceTree = "<group>";
@@ -416,6 +431,8 @@
 				D395CFC715B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */,
 				D395CFDF15B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */,
 				D395CFE315B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */,
+				D5E9BA4A18FC877700A28D05 /* diceware-definitions.m in Sources */,
+				D5E9BA4618FC869400A28D05 /* NSArray+Diceware.m in Sources */,
 				D395CFEA15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */,
 				D395CFEE15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */,
 				D395CFF615B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */,
@@ -433,9 +450,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E9BA4118FC815B00A28D05 /* NSString+Diceware.m in Sources */,
+				D5E9BA4718FC869400A28D05 /* NSArray+Diceware.m in Sources */,
+				D5E9BA4118FC815B00A28D05 /* NSString+DicewareTests.m in Sources */,
+				D5E9BA4D18FC89A300A28D05 /* NSArray+DicewareTests.m in Sources */,
 				D5E9BA4318FC823600A28D05 /* beale_wordlist.c in Sources */,
 				D5E9BA4218FC823000A28D05 /* diceware_wordlist.c in Sources */,
+				D5E9BA4B18FC877700A28D05 /* diceware-definitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

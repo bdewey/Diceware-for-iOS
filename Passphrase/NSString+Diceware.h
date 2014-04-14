@@ -19,10 +19,16 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-
-extern const NSUInteger kWordlistCount;
+#import "diceware-definitions.h"
 
 @interface NSString (Diceware)
+
+/**
+ Converts a number in the range 0..7775 to the corresponding faces on dice.
+ 0 becomes 11111,
+ 7775 becomes 66666.
+ */
++ (NSString *)pp_dicewareStringFromNumber:(PPDicewareNumber)number;
 
 + (NSString *)pp_wordAtIndex:(NSUInteger)index fromDicewareWordlist:(char **)wordlist;
 

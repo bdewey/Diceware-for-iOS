@@ -19,23 +19,31 @@
 //  THE SOFTWARE.
 
 #import "NSArray+Diceware.h"
-#import "NSString+Diceware.h"
 
-@implementation NSString (Diceware)
+/**
+ The number of dice rolls used to pick a diceware word
+ */
+static const NSUInteger kDicewareDiceRolls = 5;
+static const NSUInteger powersOfSix[] = {
+  6 * 6 * 6 * 6,
+  6 * 6 * 6,
+  6 * 6,
+  6,
+  1
+};
 
-+ (NSString *)pp_wordAtIndex:(NSUInteger)index fromDicewareWordlist:(char **)wordlist
+@implementation NSArray (Diceware)
+
++ (NSArray *)pp_arrayFromDicewareNumber:(PPDicewareNumber)number
 {
-  PPThrowIfInvalidDicewareNumber(index);
-  char *cstring = wordlist[index];
-  return [NSString stringWithCString:cstring encoding:NSUTF8StringEncoding];
-}
-
-+ (NSString *)pp_dicewareStringFromNumber:(PPDicewareNumber)number
-{
-  NSMutableString *results = [[NSMutableString alloc] init];
-  NSArray *components = [NSArray pp_arrayFromDicewareNumber:number];
-  for (NSNumber *component in components) {
-    [results appendFormat:@"%u", [component unsignedIntValue]];
+  PPThrowIfInvalidDicewareNumber(number);
+  NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:kDicewareDiceRolls];
+  
+  for (NSUInteger i = 0; i < kDicewareDiceRolls; i++) {
+    NSUInteger currentPower = powersOfSix[i];
+    NSUInteger quotient = number / currentPower;
+    number -= quotient * currentPower;
+    [results addObject:@(quotient + 1)];
   }
   return [results copy];
 }
