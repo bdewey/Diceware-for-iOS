@@ -29,21 +29,16 @@
 
 @implementation NSString_Diceware
 
-- (void)setUp
-{
-  [super setUp];
-  // Put setup code here; it will be run once, before the first test case.
-}
-
-- (void)tearDown
-{
-  // Put teardown code here; it will be run once, after the last test case.
-  [super tearDown];
-}
-
 - (void)testSimpleLookup
 {
   XCTAssertEqualObjects(@"ablaze", [NSString pp_wordAtIndex:29 fromDicewareWordlist:beale_wordlist], @"");
+}
+
+- (void)testBoundaries
+{
+  XCTAssertEqualObjects(@"a", [NSString pp_wordAtIndex:0 fromDicewareWordlist:diceware_wordlist], @"");
+  XCTAssertEqualObjects(@"@", [NSString pp_wordAtIndex:kWordlistCount-1 fromDicewareWordlist:diceware_wordlist], @"");
+  XCTAssertThrowsSpecificNamed([NSString pp_wordAtIndex:kWordlistCount fromDicewareWordlist:diceware_wordlist], NSException, NSInvalidArgumentException, @"");
 }
 
 @end
