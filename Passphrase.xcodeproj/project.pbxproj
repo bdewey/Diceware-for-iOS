@@ -20,64 +20,46 @@
 		D395CF8715B1427400FDF0E6 /* PPMasterPassphraseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */; };
 		D395CF8915B1427400FDF0E6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8815B1427400FDF0E6 /* second.png */; };
 		D395CF8B15B1427400FDF0E6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8A15B1427400FDF0E6 /* second@2x.png */; };
-		D395CF9315B1427400FDF0E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */; };
-		D395CF9415B1427400FDF0E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6615B1427400FDF0E6 /* UIKit.framework */; };
-		D395CF9515B1427400FDF0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6815B1427400FDF0E6 /* Foundation.framework */; };
-		D395CF9D15B1427400FDF0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D395CF9B15B1427400FDF0E6 /* InfoPlist.strings */; };
-		D395CFA015B1427400FDF0E6 /* PassphraseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF9F15B1427400FDF0E6 /* PassphraseTests.m */; };
 		D395CFAA15B146D100FDF0E6 /* diceware8k.c in Sources */ = {isa = PBXBuildFile; fileRef = D395CFA915B146D100FDF0E6 /* diceware8k.c */; };
-		D395CFAB15B146D100FDF0E6 /* diceware8k.c in Sources */ = {isa = PBXBuildFile; fileRef = D395CFA915B146D100FDF0E6 /* diceware8k.c */; };
 		D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */; };
-		D395CFB415B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */; };
 		D395CFB515B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */; };
-		D395CFB615B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */; };
 		D395CFB815B148BA00FDF0E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFB715B148BA00FDF0E6 /* Security.framework */; };
-		D395CFB915B148E600FDF0E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFB715B148BA00FDF0E6 /* Security.framework */; };
 		D395CFC015B1D74400FDF0E6 /* GenerateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */; };
-		D395CFC115B1D74400FDF0E6 /* GenerateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */; };
 		D395CFC215B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */; };
-		D395CFC315B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */; };
 		D395CFC715B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */; };
-		D395CFC815B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */; };
 		D395CFCB15B1F49E00FDF0E6 /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFC915B1F49E00FDF0E6 /* DoneButton.png */; };
-		D395CFCC15B1F49E00FDF0E6 /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFC915B1F49E00FDF0E6 /* DoneButton.png */; };
 		D395CFCD15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */; };
-		D395CFCE15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */; };
 		D395CFD115B1F5DD00FDF0E6 /* BlackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */; };
-		D395CFD215B1F5DD00FDF0E6 /* BlackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */; };
 		D395CFD315B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */; };
-		D395CFD415B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */; };
 		D395CFDF15B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFDE15B1FB5C00FDF0E6 /* PPPassphrase.m */; };
-		D395CFE015B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFDE15B1FB5C00FDF0E6 /* PPPassphrase.m */; };
 		D395CFE315B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */; };
-		D395CFE415B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */; };
 		D395CFE615B310CF00FDF0E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFE515B310CF00FDF0E6 /* CoreData.framework */; };
-		D395CFE715B3113200FDF0E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFE515B310CF00FDF0E6 /* CoreData.framework */; };
 		D395CFEA15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */; };
-		D395CFEB15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFE915B315EA00FDF0E6 /* PPEncryptionMetadata.m */; };
 		D395CFEE15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */; };
-		D395CFEF15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFED15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m */; };
 		D395CFF615B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */; };
-		D395CFF715B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */; };
 		D395CFF915B3DC7900FDF0E6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFF815B3DC7900FDF0E6 /* Icon@2x.png */; };
 		D395CFFB15B3DC7E00FDF0E6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFFA15B3DC7E00FDF0E6 /* Icon.png */; };
 		D395CFFE15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFFD15B3E98F00FDF0E6 /* PPNewResourceViewController.m */; };
-		D395CFFF15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFFD15B3E98F00FDF0E6 /* PPNewResourceViewController.m */; };
 		D395D00215B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00115B3F21200FDF0E6 /* PPPassphraseGenerator.m */; };
-		D395D00315B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00115B3F21200FDF0E6 /* PPPassphraseGenerator.m */; };
 		D395D00615B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00515B3FA0600FDF0E6 /* NSError+Passphrase.m */; };
-		D395D00715B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00515B3FA0600FDF0E6 /* NSError+Passphrase.m */; };
 		D395D00A15B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00915B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m */; };
-		D395D00B15B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00915B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m */; };
 		D395D00E15B4014500FDF0E6 /* PPResource+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00D15B4014500FDF0E6 /* PPResource+Passphrase.m */; };
-		D395D00F15B4014500FDF0E6 /* PPResource+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00D15B4014500FDF0E6 /* PPResource+Passphrase.m */; };
 		D395D01A15B40B3F00FDF0E6 /* PPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D01915B40B3F00FDF0E6 /* PPResource.m */; };
-		D395D01B15B40B3F00FDF0E6 /* PPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D01915B40B3F00FDF0E6 /* PPResource.m */; };
 		D5E9BA1C18FC715E00A28D05 /* NSString+FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */; };
+		D5E9BA1F18FC776B00A28D05 /* beale_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */; };
+		D5E9BA2018FC776B00A28D05 /* diceware_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */; };
+		D5E9BA2518FC79FF00A28D05 /* NSString+Diceware.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA2418FC79FF00A28D05 /* NSString+Diceware.m */; };
+		D5E9BA2F18FC80E100A28D05 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9BA2E18FC80E100A28D05 /* XCTest.framework */; };
+		D5E9BA3018FC80E100A28D05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6815B1427400FDF0E6 /* Foundation.framework */; };
+		D5E9BA3118FC80E100A28D05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6615B1427400FDF0E6 /* UIKit.framework */; };
+		D5E9BA3718FC80E100A28D05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5E9BA3518FC80E100A28D05 /* InfoPlist.strings */; };
+		D5E9BA4118FC815B00A28D05 /* NSString+Diceware.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA4018FC815B00A28D05 /* NSString+Diceware.m */; };
+		D5E9BA4218FC823000A28D05 /* diceware_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */; };
+		D5E9BA4318FC823600A28D05 /* beale_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D395CF9615B1427400FDF0E6 /* PBXContainerItemProxy */ = {
+		D5E9BA3B18FC80E100A28D05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D395CF5915B1427400FDF0E6 /* Project object */;
 			proxyType = 1;
@@ -105,12 +87,7 @@
 		D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMasterPassphraseController.m; sourceTree = "<group>"; };
 		D395CF8815B1427400FDF0E6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D395CF8A15B1427400FDF0E6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassphraseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D395CF9A15B1427400FDF0E6 /* PassphraseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassphraseTests-Info.plist"; sourceTree = "<group>"; };
-		D395CF9C15B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D395CF9E15B1427400FDF0E6 /* PassphraseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassphraseTests.h; sourceTree = "<group>"; };
-		D395CF9F15B1427400FDF0E6 /* PassphraseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassphraseTests.m; sourceTree = "<group>"; };
 		D395CFA915B146D100FDF0E6 /* diceware8k.c */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.c; path = diceware8k.c; sourceTree = "<group>"; tabWidth = 2; };
 		D395CFAF15B147C200FDF0E6 /* NSData+EncryptionHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EncryptionHelpers.h"; sourceTree = "<group>"; };
 		D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EncryptionHelpers.m"; sourceTree = "<group>"; };
@@ -151,6 +128,18 @@
 		D395D01915B40B3F00FDF0E6 /* PPResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResource.m; sourceTree = "<group>"; };
 		D5E9BA1A18FC715E00A28D05 /* NSString+FileSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FileSystemHelper.h"; sourceTree = "<group>"; };
 		D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileSystemHelper.m"; sourceTree = "<group>"; };
+		D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = beale_wordlist.c; sourceTree = "<group>"; };
+		D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = diceware_wordlist.c; sourceTree = "<group>"; };
+		D5E9BA2118FC795C00A28D05 /* beale_wordlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = beale_wordlist.h; sourceTree = "<group>"; };
+		D5E9BA2218FC799F00A28D05 /* diceware_wordlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = diceware_wordlist.h; sourceTree = "<group>"; };
+		D5E9BA2318FC79FF00A28D05 /* NSString+Diceware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Diceware.h"; sourceTree = "<group>"; };
+		D5E9BA2418FC79FF00A28D05 /* NSString+Diceware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Diceware.m"; sourceTree = "<group>"; };
+		D5E9BA2D18FC80E100A28D05 /* PassphraseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassphraseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5E9BA2E18FC80E100A28D05 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D5E9BA3418FC80E100A28D05 /* PassphraseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassphraseTests-Info.plist"; sourceTree = "<group>"; };
+		D5E9BA3618FC80E100A28D05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D5E9BA3A18FC80E100A28D05 /* PassphraseTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PassphraseTests-Prefix.pch"; sourceTree = "<group>"; };
+		D5E9BA4018FC815B00A28D05 /* NSString+Diceware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Diceware.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,15 +155,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D395CF8D15B1427400FDF0E6 /* Frameworks */ = {
+		D5E9BA2A18FC80E100A28D05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D395CF9315B1427400FDF0E6 /* SenTestingKit.framework in Frameworks */,
-				D395CF9415B1427400FDF0E6 /* UIKit.framework in Frameworks */,
-				D395CF9515B1427400FDF0E6 /* Foundation.framework in Frameworks */,
-				D395CFB915B148E600FDF0E6 /* Security.framework in Frameworks */,
-				D395CFE715B3113200FDF0E6 /* CoreData.framework in Frameworks */,
+				D5E9BA2F18FC80E100A28D05 /* XCTest.framework in Frameworks */,
+				D5E9BA3118FC80E100A28D05 /* UIKit.framework in Frameworks */,
+				D5E9BA3018FC80E100A28D05 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +174,7 @@
 				D395CFFA15B3DC7E00FDF0E6 /* Icon.png */,
 				D395CFF815B3DC7900FDF0E6 /* Icon@2x.png */,
 				D395CF6C15B1427400FDF0E6 /* Passphrase */,
-				D395CF9815B1427400FDF0E6 /* PassphraseTests */,
+				D5E9BA3218FC80E100A28D05 /* PassphraseTests */,
 				D395CF6515B1427400FDF0E6 /* Frameworks */,
 				D395CF6315B1427400FDF0E6 /* Products */,
 			);
@@ -199,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D395CF6215B1427400FDF0E6 /* Passphrase.app */,
-				D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */,
+				D5E9BA2D18FC80E100A28D05 /* PassphraseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +200,7 @@
 				D395CF6815B1427400FDF0E6 /* Foundation.framework */,
 				D395CF6A15B1427400FDF0E6 /* CoreGraphics.framework */,
 				D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */,
+				D5E9BA2E18FC80E100A28D05 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,9 +208,13 @@
 		D395CF6C15B1427400FDF0E6 /* Passphrase */ = {
 			isa = PBXGroup;
 			children = (
+				D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */,
+				D5E9BA2118FC795C00A28D05 /* beale_wordlist.h */,
 				D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */,
 				D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */,
 				D395CFA915B146D100FDF0E6 /* diceware8k.c */,
+				D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */,
+				D5E9BA2218FC799F00A28D05 /* diceware_wordlist.h */,
 				D395CFC915B1F49E00FDF0E6 /* DoneButton.png */,
 				D395CFCA15B1F49E00FDF0E6 /* DoneButton@2x.png */,
 				D395CF8115B1427400FDF0E6 /* first.png */,
@@ -235,6 +227,8 @@
 				D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */,
 				D395D00415B3FA0600FDF0E6 /* NSError+Passphrase.h */,
 				D395D00515B3FA0600FDF0E6 /* NSError+Passphrase.m */,
+				D5E9BA2318FC79FF00A28D05 /* NSString+Diceware.h */,
+				D5E9BA2418FC79FF00A28D05 /* NSString+Diceware.m */,
 				D5E9BA1A18FC715E00A28D05 /* NSString+FileSystemHelper.h */,
 				D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */,
 				D395CF7515B1427400FDF0E6 /* PPAppDelegate.h */,
@@ -282,21 +276,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D395CF9815B1427400FDF0E6 /* PassphraseTests */ = {
+		D5E9BA3218FC80E100A28D05 /* PassphraseTests */ = {
 			isa = PBXGroup;
 			children = (
-				D395CF9E15B1427400FDF0E6 /* PassphraseTests.h */,
-				D395CF9F15B1427400FDF0E6 /* PassphraseTests.m */,
-				D395CF9915B1427400FDF0E6 /* Supporting Files */,
+				D5E9BA3318FC80E100A28D05 /* Supporting Files */,
+				D5E9BA4018FC815B00A28D05 /* NSString+Diceware.m */,
 			);
 			path = PassphraseTests;
 			sourceTree = "<group>";
 		};
-		D395CF9915B1427400FDF0E6 /* Supporting Files */ = {
+		D5E9BA3318FC80E100A28D05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D395CF9A15B1427400FDF0E6 /* PassphraseTests-Info.plist */,
-				D395CF9B15B1427400FDF0E6 /* InfoPlist.strings */,
+				D5E9BA3418FC80E100A28D05 /* PassphraseTests-Info.plist */,
+				D5E9BA3518FC80E100A28D05 /* InfoPlist.strings */,
+				D5E9BA3A18FC80E100A28D05 /* PassphraseTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -321,24 +315,23 @@
 			productReference = D395CF6215B1427400FDF0E6 /* Passphrase.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D395CF9015B1427400FDF0E6 /* PassphraseTests */ = {
+		D5E9BA2C18FC80E100A28D05 /* PassphraseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D395CFA615B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "PassphraseTests" */;
+			buildConfigurationList = D5E9BA3D18FC80E100A28D05 /* Build configuration list for PBXNativeTarget "PassphraseTests" */;
 			buildPhases = (
-				D395CF8C15B1427400FDF0E6 /* Sources */,
-				D395CF8D15B1427400FDF0E6 /* Frameworks */,
-				D395CF8E15B1427400FDF0E6 /* Resources */,
-				D395CF8F15B1427400FDF0E6 /* ShellScript */,
+				D5E9BA2918FC80E100A28D05 /* Sources */,
+				D5E9BA2A18FC80E100A28D05 /* Frameworks */,
+				D5E9BA2B18FC80E100A28D05 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D395CF9715B1427400FDF0E6 /* PBXTargetDependency */,
+				D5E9BA3C18FC80E100A28D05 /* PBXTargetDependency */,
 			);
 			name = PassphraseTests;
 			productName = PassphraseTests;
-			productReference = D395CF9115B1427400FDF0E6 /* PassphraseTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = D5E9BA2D18FC80E100A28D05 /* PassphraseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -349,6 +342,11 @@
 				CLASSPREFIX = PP;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Brian's Brain";
+				TargetAttributes = {
+					D5E9BA2C18FC80E100A28D05 = {
+						TestTargetID = D395CF6115B1427400FDF0E6;
+					};
+				};
 			};
 			buildConfigurationList = D395CF5C15B1427400FDF0E6 /* Build configuration list for PBXProject "Passphrase" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -363,7 +361,7 @@
 			projectRoot = "";
 			targets = (
 				D395CF6115B1427400FDF0E6 /* Passphrase */,
-				D395CF9015B1427400FDF0E6 /* PassphraseTests */,
+				D5E9BA2C18FC80E100A28D05 /* PassphraseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,43 +389,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D395CF8E15B1427400FDF0E6 /* Resources */ = {
+		D5E9BA2B18FC80E100A28D05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D395CF9D15B1427400FDF0E6 /* InfoPlist.strings in Resources */,
-				D395CFC115B1D74400FDF0E6 /* GenerateButton.png in Resources */,
-				D395CFC315B1D74400FDF0E6 /* GenerateButton@2x.png in Resources */,
-				D395CFCC15B1F49E00FDF0E6 /* DoneButton.png in Resources */,
-				D395CFCE15B1F49E00FDF0E6 /* DoneButton@2x.png in Resources */,
-				D395CFD215B1F5DD00FDF0E6 /* BlackBackground.png in Resources */,
-				D395CFD415B1F5DD00FDF0E6 /* BlackBackground@2x.png in Resources */,
+				D5E9BA3718FC80E100A28D05 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D395CF8F15B1427400FDF0E6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D395CF5E15B1427400FDF0E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E9BA2018FC776B00A28D05 /* diceware_wordlist.c in Sources */,
+				D5E9BA2518FC79FF00A28D05 /* NSString+Diceware.m in Sources */,
 				D395CF7315B1427400FDF0E6 /* main.m in Sources */,
 				D5E9BA1C18FC715E00A28D05 /* NSString+FileSystemHelper.m in Sources */,
 				D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */,
@@ -445,41 +423,29 @@
 				D395D00215B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */,
 				D395D00615B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */,
 				D395D00A15B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m in Sources */,
+				D5E9BA1F18FC776B00A28D05 /* beale_wordlist.c in Sources */,
 				D395D00E15B4014500FDF0E6 /* PPResource+Passphrase.m in Sources */,
 				D395D01A15B40B3F00FDF0E6 /* PPResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D395CF8C15B1427400FDF0E6 /* Sources */ = {
+		D5E9BA2918FC80E100A28D05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D395CFA015B1427400FDF0E6 /* PassphraseTests.m in Sources */,
-				D395CFAB15B146D100FDF0E6 /* diceware8k.c in Sources */,
-				D395CFB415B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
-				D395CFB615B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
-				D395CFC815B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld in Sources */,
-				D395CFE015B1FB5C00FDF0E6 /* PPPassphrase.m in Sources */,
-				D395CFE415B30FD300FDF0E6 /* PPSavedPassphraseContext.m in Sources */,
-				D395CFEB15B315EA00FDF0E6 /* PPEncryptionMetadata.m in Sources */,
-				D395CFEF15B319CF00FDF0E6 /* PPEncryptionMetadata+Passphrase.m in Sources */,
-				D395CFF715B3288E00FDF0E6 /* PPResourcesViewController.m in Sources */,
-				D395CFFF15B3E98F00FDF0E6 /* PPNewResourceViewController.m in Sources */,
-				D395D00315B3F21200FDF0E6 /* PPPassphraseGenerator.m in Sources */,
-				D395D00715B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */,
-				D395D00B15B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m in Sources */,
-				D395D00F15B4014500FDF0E6 /* PPResource+Passphrase.m in Sources */,
-				D395D01B15B40B3F00FDF0E6 /* PPResource.m in Sources */,
+				D5E9BA4118FC815B00A28D05 /* NSString+Diceware.m in Sources */,
+				D5E9BA4318FC823600A28D05 /* beale_wordlist.c in Sources */,
+				D5E9BA4218FC823000A28D05 /* diceware_wordlist.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D395CF9715B1427400FDF0E6 /* PBXTargetDependency */ = {
+		D5E9BA3C18FC80E100A28D05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D395CF6115B1427400FDF0E6 /* Passphrase */;
-			targetProxy = D395CF9615B1427400FDF0E6 /* PBXContainerItemProxy */;
+			targetProxy = D5E9BA3B18FC80E100A28D05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -508,10 +474,10 @@
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		D395CF9B15B1427400FDF0E6 /* InfoPlist.strings */ = {
+		D5E9BA3518FC80E100A28D05 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D395CF9C15B1427400FDF0E6 /* en */,
+				D5E9BA3618FC80E100A28D05 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -605,37 +571,60 @@
 			};
 			name = Release;
 		};
-		D395CFA715B1427400FDF0E6 /* Debug */ = {
+		D5E9BA3E18FC80E100A28D05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passphrase.app/Passphrase";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passphrase/Passphrase-Prefix.pch";
+				GCC_PREFIX_HEADER = "PassphraseTests/PassphraseTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "PassphraseTests/PassphraseTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		D395CFA815B1427400FDF0E6 /* Release */ = {
+		D5E9BA3F18FC80E100A28D05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Passphrase.app/Passphrase";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Passphrase/Passphrase-Prefix.pch";
+				GCC_PREFIX_HEADER = "PassphraseTests/PassphraseTests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "PassphraseTests/PassphraseTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -660,14 +649,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D395CFA615B1427400FDF0E6 /* Build configuration list for PBXNativeTarget "PassphraseTests" */ = {
+		D5E9BA3D18FC80E100A28D05 /* Build configuration list for PBXNativeTarget "PassphraseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D395CFA715B1427400FDF0E6 /* Debug */,
-				D395CFA815B1427400FDF0E6 /* Release */,
+				D5E9BA3E18FC80E100A28D05 /* Debug */,
+				D5E9BA3F18FC80E100A28D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
