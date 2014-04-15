@@ -53,6 +53,7 @@ static const CGFloat kPadding = 8.0;
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Roll" style:UIBarButtonItemStyleBordered target:self action:@selector(_generateRoll)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -168,18 +169,31 @@ static const CGFloat kPadding = 8.0;
   return [_inputValidator numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)] == 1;
 }
 
+#pragma mark - Actions
+
 - (void)_inputFieldDidChange:(UITextField *)inputField
 {
   NSString *text = inputField.text;
   if (text.length == kDicewareRollCount) {
     PPDicewareNumber number = [text pp_dicewareNumber];
-    [_generatedDicewareNumbers insertObject:@(number) atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:PPWordLookupSectionWords];
-    [self.tableView beginUpdates];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView endUpdates];
+    [self _insertRowForNumber:number];
     inputField.text = @"";
   }
+}
+
+- (void)_generateRoll
+{
+  PPDicewareNumber number = arc4random_uniform(kDicewareWordlistCount);
+  [self _insertRowForNumber:number];
+}
+
+- (void)_insertRowForNumber:(PPDicewareNumber)number
+{
+  [_generatedDicewareNumbers insertObject:@(number) atIndex:0];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:PPWordLookupSectionWords];
+  [self.tableView beginUpdates];
+  [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+  [self.tableView endUpdates];
 }
 
 @end
