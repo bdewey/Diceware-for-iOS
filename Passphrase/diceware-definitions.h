@@ -20,6 +20,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ How many rolls of a six-sided dice make up a diceword word? (5)
+ */
+extern const NSUInteger kDicewareRollCount;
+
+/**
+ How many words are in a diceware wordlist? (7776... i.e., 6^5)
+ */
 extern const NSUInteger kDicewareWordlistCount;
 
 /**

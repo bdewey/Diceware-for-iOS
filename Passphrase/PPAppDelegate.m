@@ -18,11 +18,11 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+#import "diceware_wordlist.h"
 #import "PPAppDelegate.h"
+#import "PPWordLookupViewController.h"
 
 @implementation PPAppDelegate
-
-@synthesize window = _window;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -30,11 +30,13 @@
 
   // Override point for customization after application launch.
   
-  UIFont *courier = [UIFont fontWithName:@"Courier New" size:21];
-  NSDictionary *titleBar = [NSDictionary dictionaryWithObjectsAndKeys:courier, UITextAttributeFont,
-                            [UIColor greenColor], UITextAttributeTextColor, 
-                            nil];
-  [[UINavigationBar appearance] setTitleTextAttributes:titleBar];
+  _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  
+  PPWordLookupViewController *wordLookupViewController = [[PPWordLookupViewController alloc] initWithDicewareWordList:diceware_wordlist];
+  wordLookupViewController.title = @"Diceware";
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:wordLookupViewController];
+  _window.rootViewController = navigationController;
+  [_window makeKeyAndVisible];
   return YES;
 }
 

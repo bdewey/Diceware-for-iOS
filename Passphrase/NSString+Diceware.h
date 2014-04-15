@@ -30,6 +30,13 @@
  */
 + (NSString *)pp_dicewareStringFromNumber:(PPDicewareNumber)number;
 
+/**
+ Converts the string representation of a diceware number to the corresponding integer.
+ "11111" becomes 0.
+ "66666" becomes 7775.
+ */
+- (PPDicewareNumber)pp_dicewareNumber;
+
 + (NSString *)pp_wordAtIndex:(NSUInteger)index fromDicewareWordlist:(char **)wordlist;
 
 @end

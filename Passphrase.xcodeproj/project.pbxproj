@@ -13,8 +13,6 @@
 		D395CF7115B1427400FDF0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D395CF6F15B1427400FDF0E6 /* InfoPlist.strings */; };
 		D395CF7315B1427400FDF0E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7215B1427400FDF0E6 /* main.m */; };
 		D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */; };
-		D395CF7A15B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */; };
-		D395CF7D15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */; };
 		D395CF8215B1427400FDF0E6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8115B1427400FDF0E6 /* first.png */; };
 		D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CF8315B1427400FDF0E6 /* first@2x.png */; };
 		D395CF8715B1427400FDF0E6 /* PPMasterPassphraseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF8615B1427400FDF0E6 /* PPMasterPassphraseController.m */; };
@@ -45,6 +43,8 @@
 		D395D00A15B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00915B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m */; };
 		D395D00E15B4014500FDF0E6 /* PPResource+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00D15B4014500FDF0E6 /* PPResource+Passphrase.m */; };
 		D395D01A15B40B3F00FDF0E6 /* PPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D01915B40B3F00FDF0E6 /* PPResource.m */; };
+		D5A3995018FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */; };
+		D5A3995118FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */; };
 		D5E9BA1C18FC715E00A28D05 /* NSString+FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */; };
 		D5E9BA1F18FC776B00A28D05 /* beale_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */; };
 		D5E9BA2018FC776B00A28D05 /* diceware_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */; };
@@ -84,8 +84,6 @@
 		D395CF7415B1427400FDF0E6 /* Passphrase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Passphrase-Prefix.pch"; sourceTree = "<group>"; };
 		D395CF7515B1427400FDF0E6 /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
 		D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
-		D395CF7915B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		D395CF7C15B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D395CF8115B1427400FDF0E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D395CF8315B1427400FDF0E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		D395CF8515B1427400FDF0E6 /* PPMasterPassphraseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMasterPassphraseController.h; sourceTree = "<group>"; };
@@ -131,6 +129,8 @@
 		D395D00D15B4014500FDF0E6 /* PPResource+Passphrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPResource+Passphrase.m"; sourceTree = "<group>"; };
 		D395D01815B40B3E00FDF0E6 /* PPResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResource.h; sourceTree = "<group>"; };
 		D395D01915B40B3F00FDF0E6 /* PPResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResource.m; sourceTree = "<group>"; };
+		D5A3994E18FCEEB000AA0E15 /* PPWordLookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWordLookupViewController.h; sourceTree = "<group>"; };
+		D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWordLookupViewController.m; sourceTree = "<group>"; };
 		D5E9BA1A18FC715E00A28D05 /* NSString+FileSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FileSystemHelper.h"; sourceTree = "<group>"; };
 		D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileSystemHelper.m"; sourceTree = "<group>"; };
 		D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = beale_wordlist.c; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 				D5E9BA2118FC795C00A28D05 /* beale_wordlist.h */,
 				D395CFCF15B1F5DD00FDF0E6 /* BlackBackground.png */,
 				D395CFD015B1F5DD00FDF0E6 /* BlackBackground@2x.png */,
-				D5E9BA4918FC877700A28D05 /* diceware-definitions.m */,
 				D5E9BA4818FC870100A28D05 /* diceware-definitions.h */,
+				D5E9BA4918FC877700A28D05 /* diceware-definitions.m */,
 				D395CFA915B146D100FDF0E6 /* diceware8k.c */,
 				D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */,
 				D5E9BA2218FC799F00A28D05 /* diceware_wordlist.h */,
@@ -233,8 +233,6 @@
 				D395CF8315B1427400FDF0E6 /* first@2x.png */,
 				D395CFBE15B1D74400FDF0E6 /* GenerateButton.png */,
 				D395CFBF15B1D74400FDF0E6 /* GenerateButton@2x.png */,
-				D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */,
-				D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */,
 				D5E9BA4418FC869400A28D05 /* NSArray+Diceware.h */,
 				D5E9BA4518FC869400A28D05 /* NSArray+Diceware.m */,
 				D395CFAF15B147C200FDF0E6 /* NSData+EncryptionHelpers.h */,
@@ -269,6 +267,8 @@
 				D395CFF515B3288E00FDF0E6 /* PPResourcesViewController.m */,
 				D395CFE115B30FD300FDF0E6 /* PPSavedPassphraseContext.h */,
 				D395CFE215B30FD300FDF0E6 /* PPSavedPassphraseContext.m */,
+				D5A3994E18FCEEB000AA0E15 /* PPWordLookupViewController.h */,
+				D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */,
 				D395CFB115B147C200FDF0E6 /* Rfc2898DeriveBytes.h */,
 				D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */,
 				D395CFC515B1DAFE00FDF0E6 /* SavedPhrases.xcdatamodeld */,
@@ -387,8 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D395CF7115B1427400FDF0E6 /* InfoPlist.strings in Resources */,
-				D395CF7A15B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard in Resources */,
-				D395CF7D15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard in Resources */,
 				D395CF8215B1427400FDF0E6 /* first.png in Resources */,
 				D395CF8415B1427400FDF0E6 /* first@2x.png in Resources */,
 				D395CF8915B1427400FDF0E6 /* second.png in Resources */,
@@ -441,6 +439,7 @@
 				D395D00615B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */,
 				D395D00A15B3FF7500FDF0E6 /* PPPassphrase+Passphrase.m in Sources */,
 				D5E9BA1F18FC776B00A28D05 /* beale_wordlist.c in Sources */,
+				D5A3995018FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */,
 				D395D00E15B4014500FDF0E6 /* PPResource+Passphrase.m in Sources */,
 				D395D01A15B40B3F00FDF0E6 /* PPResource.m in Sources */,
 			);
@@ -451,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E9BA4718FC869400A28D05 /* NSArray+Diceware.m in Sources */,
+				D5A3995118FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */,
 				D5E9BA4118FC815B00A28D05 /* NSString+DicewareTests.m in Sources */,
 				D5E9BA4D18FC89A300A28D05 /* NSArray+DicewareTests.m in Sources */,
 				D5E9BA4318FC823600A28D05 /* beale_wordlist.c in Sources */,
@@ -476,22 +476,6 @@
 				D395CF7015B1427400FDF0E6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D395CF7815B1427400FDF0E6 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D395CF7915B1427400FDF0E6 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		D395CF7B15B1427400FDF0E6 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D395CF7C15B1427400FDF0E6 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		D5E9BA3518FC80E100A28D05 /* InfoPlist.strings */ = {
@@ -676,6 +660,7 @@
 				D5E9BA3F18FC80E100A28D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
