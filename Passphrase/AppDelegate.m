@@ -19,10 +19,10 @@
 //  THE SOFTWARE.
 
 #import "diceware_wordlist.h"
-#import "PPAppDelegate.h"
+#import "AppDelegate.h"
 #import "PPWordLookupViewController.h"
 
-@implementation PPAppDelegate
+@implementation AppDelegate
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 

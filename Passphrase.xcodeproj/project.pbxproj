@@ -12,7 +12,7 @@
 		D395CF6B15B1427400FDF0E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CF6A15B1427400FDF0E6 /* CoreGraphics.framework */; };
 		D395CF7115B1427400FDF0E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D395CF6F15B1427400FDF0E6 /* InfoPlist.strings */; };
 		D395CF7315B1427400FDF0E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7215B1427400FDF0E6 /* main.m */; };
-		D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */; };
+		D395CF7715B1427400FDF0E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CF7615B1427400FDF0E6 /* AppDelegate.m */; };
 		D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */; };
 		D395CFB515B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */; };
 		D395CFB815B148BA00FDF0E6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395CFB715B148BA00FDF0E6 /* Security.framework */; };
@@ -59,8 +59,8 @@
 		D395CF7015B1427400FDF0E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D395CF7215B1427400FDF0E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D395CF7415B1427400FDF0E6 /* Passphrase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Passphrase-Prefix.pch"; sourceTree = "<group>"; };
-		D395CF7515B1427400FDF0E6 /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
-		D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
+		D395CF7515B1427400FDF0E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D395CF7615B1427400FDF0E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D395CF9215B1427400FDF0E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D395CFAF15B147C200FDF0E6 /* NSData+EncryptionHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EncryptionHelpers.h"; sourceTree = "<group>"; };
 		D395CFB015B147C200FDF0E6 /* NSData+EncryptionHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EncryptionHelpers.m"; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 				D5E9BA2418FC79FF00A28D05 /* NSString+Diceware.m */,
 				D5E9BA1A18FC715E00A28D05 /* NSString+FileSystemHelper.h */,
 				D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */,
-				D395CF7515B1427400FDF0E6 /* PPAppDelegate.h */,
-				D395CF7615B1427400FDF0E6 /* PPAppDelegate.m */,
+				D395CF7515B1427400FDF0E6 /* AppDelegate.h */,
+				D395CF7615B1427400FDF0E6 /* AppDelegate.m */,
 				D5A3994E18FCEEB000AA0E15 /* PPWordLookupViewController.h */,
 				D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */,
 				D395CFB115B147C200FDF0E6 /* Rfc2898DeriveBytes.h */,
@@ -320,7 +320,7 @@
 				D5E9BA2518FC79FF00A28D05 /* NSString+Diceware.m in Sources */,
 				D395CF7315B1427400FDF0E6 /* main.m in Sources */,
 				D5E9BA1C18FC715E00A28D05 /* NSString+FileSystemHelper.m in Sources */,
-				D395CF7715B1427400FDF0E6 /* PPAppDelegate.m in Sources */,
+				D395CF7715B1427400FDF0E6 /* AppDelegate.m in Sources */,
 				D395CFB315B147C200FDF0E6 /* NSData+EncryptionHelpers.m in Sources */,
 				D395CFB515B147C200FDF0E6 /* Rfc2898DeriveBytes.m in Sources */,
 				D5E9BA4A18FC877700A28D05 /* diceware-definitions.m in Sources */,
