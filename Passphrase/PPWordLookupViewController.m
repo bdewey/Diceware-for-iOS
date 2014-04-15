@@ -128,7 +128,7 @@ static const CGFloat kPadding = 8.0;
   inputField.text = @"";
   self.activeInputField = inputField;
   cell.accessoryView = inputField;
-  cell.textLabel.text = @"Dice rolls";
+  cell.textLabel.text = @"Record manual dice rolls";
   return cell;
 }
 
@@ -194,6 +194,9 @@ static const CGFloat kPadding = 8.0;
   [self.tableView beginUpdates];
   [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
   [self.tableView endUpdates];
+  if (_generatedDicewareNumbers.count >= 5) {
+    [self.activeInputField resignFirstResponder];
+  }
 }
 
 @end
