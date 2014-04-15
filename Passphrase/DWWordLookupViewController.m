@@ -1,12 +1,6 @@
-//
-//  PPWordLookupViewController.m
-//  Passphrase
-//
-//  Created by Brian Dewey on 4/14/14.
-//  Copyright (c) 2014 Brian's Brain. All rights reserved.
-//
+//  Copyright (c) 2014 Brian Dewey <bdewey@gmail.com>
 
-#import "PPWordLookupViewController.h"
+#import "DWWordLookupViewController.h"
 #import "NSString+Diceware.h"
 #import "diceware-definitions.h"
 #import "diceware_wordlist.h"
@@ -22,13 +16,13 @@ typedef NS_ENUM(NSInteger, PPWordLookupSections) {
 
 static const CGFloat kPadding = 8.0;
 
-@interface PPWordLookupViewController () <UITextFieldDelegate>
+@interface DWWordLookupViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong, readwrite) UITextField *activeInputField;
 
 @end
 
-@implementation PPWordLookupViewController
+@implementation DWWordLookupViewController
 {
   NSMutableArray *_generatedDicewareNumbers;
   NSRegularExpression *_inputValidator;

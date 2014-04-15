@@ -1,14 +1,8 @@
-//
-//  PPWordLookupViewController.h
-//  Passphrase
-//
-//  Created by Brian Dewey on 4/14/14.
-//  Copyright (c) 2014 Brian's Brain. All rights reserved.
-//
+//  Copyright (c) 2014 Brian Dewey <bdewey@gmail.com>
 
 #import <UIKit/UIKit.h>
 
-@interface PPWordLookupViewController : UITableViewController
+@interface DWWordLookupViewController : UITableViewController
 
 /**
  The word list used to translate dice rolls to numbers.

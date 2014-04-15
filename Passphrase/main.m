@@ -1,10 +1,4 @@
-//
-//  main.m
-//  Passphrase
-//
-//  Created by Brian Dewey on 7/13/12.
-//  Copyright (c) 2012 Brian's Brain. All rights reserved.
-//
+//  Copyright (c) 2014 Brian Dewey <bdewey@gmail.com>
 
 #import <UIKit/UIKit.h>
 

@@ -20,8 +20,8 @@
 		D395CFF915B3DC7900FDF0E6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFF815B3DC7900FDF0E6 /* Icon@2x.png */; };
 		D395CFFB15B3DC7E00FDF0E6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D395CFFA15B3DC7E00FDF0E6 /* Icon.png */; };
 		D395D00615B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */ = {isa = PBXBuildFile; fileRef = D395D00515B3FA0600FDF0E6 /* NSError+Passphrase.m */; };
-		D5A3995018FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */; };
-		D5A3995118FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */; };
+		D5A3995018FCEEB000AA0E15 /* DWWordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3994F18FCEEB000AA0E15 /* DWWordLookupViewController.m */; };
+		D5A3995118FCEEB000AA0E15 /* DWWordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3994F18FCEEB000AA0E15 /* DWWordLookupViewController.m */; };
 		D5E9BA1C18FC715E00A28D05 /* NSString+FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */; };
 		D5E9BA1F18FC776B00A28D05 /* beale_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */; };
 		D5E9BA2018FC776B00A28D05 /* diceware_wordlist.c in Sources */ = {isa = PBXBuildFile; fileRef = D5E9BA1E18FC776B00A28D05 /* diceware_wordlist.c */; };
@@ -72,8 +72,8 @@
 		D395CFFA15B3DC7E00FDF0E6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D395D00415B3FA0600FDF0E6 /* NSError+Passphrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Passphrase.h"; sourceTree = "<group>"; };
 		D395D00515B3FA0600FDF0E6 /* NSError+Passphrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Passphrase.m"; sourceTree = "<group>"; };
-		D5A3994E18FCEEB000AA0E15 /* PPWordLookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWordLookupViewController.h; sourceTree = "<group>"; };
-		D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWordLookupViewController.m; sourceTree = "<group>"; };
+		D5A3994E18FCEEB000AA0E15 /* DWWordLookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWWordLookupViewController.h; sourceTree = "<group>"; };
+		D5A3994F18FCEEB000AA0E15 /* DWWordLookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWWordLookupViewController.m; sourceTree = "<group>"; };
 		D5E9BA1A18FC715E00A28D05 /* NSString+FileSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FileSystemHelper.h"; sourceTree = "<group>"; };
 		D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileSystemHelper.m"; sourceTree = "<group>"; };
 		D5E9BA1D18FC776B00A28D05 /* beale_wordlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = beale_wordlist.c; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 				D5E9BA1B18FC715E00A28D05 /* NSString+FileSystemHelper.m */,
 				D395CF7515B1427400FDF0E6 /* AppDelegate.h */,
 				D395CF7615B1427400FDF0E6 /* AppDelegate.m */,
-				D5A3994E18FCEEB000AA0E15 /* PPWordLookupViewController.h */,
-				D5A3994F18FCEEB000AA0E15 /* PPWordLookupViewController.m */,
+				D5A3994E18FCEEB000AA0E15 /* DWWordLookupViewController.h */,
+				D5A3994F18FCEEB000AA0E15 /* DWWordLookupViewController.m */,
 				D395CFB115B147C200FDF0E6 /* Rfc2898DeriveBytes.h */,
 				D395CFB215B147C200FDF0E6 /* Rfc2898DeriveBytes.m */,
 				D395CF6D15B1427400FDF0E6 /* Supporting Files */,
@@ -263,7 +263,7 @@
 		D395CF5915B1427400FDF0E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PP;
+				CLASSPREFIX = DW;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Brian's Brain";
 				TargetAttributes = {
@@ -327,7 +327,7 @@
 				D5E9BA4618FC869400A28D05 /* NSArray+Diceware.m in Sources */,
 				D395D00615B3FA0700FDF0E6 /* NSError+Passphrase.m in Sources */,
 				D5E9BA1F18FC776B00A28D05 /* beale_wordlist.c in Sources */,
-				D5A3995018FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */,
+				D5A3995018FCEEB000AA0E15 /* DWWordLookupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E9BA4718FC869400A28D05 /* NSArray+Diceware.m in Sources */,
-				D5A3995118FCEEB000AA0E15 /* PPWordLookupViewController.m in Sources */,
+				D5A3995118FCEEB000AA0E15 /* DWWordLookupViewController.m in Sources */,
 				D5E9BA4118FC815B00A28D05 /* NSString+DicewareTests.m in Sources */,
 				D5E9BA4D18FC89A300A28D05 /* NSArray+DicewareTests.m in Sources */,
 				D5E9BA4318FC823600A28D05 /* beale_wordlist.c in Sources */,

@@ -1,10 +1,4 @@
-//
-//  diceware-definitions.c
-//  Passphrase
-//
-//  Created by Brian Dewey on 4/14/14.
-//  Copyright (c) 2014 Brian's Brain. All rights reserved.
-//
+//  Copyright (c) 2014 Brian Dewey <bdewey@gmail.com>
 
 #include "diceware-definitions.h"
 
